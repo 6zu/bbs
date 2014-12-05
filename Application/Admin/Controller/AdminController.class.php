@@ -1,6 +1,6 @@
 <?php
 
-namespace Home\Controller;
+namespace Admin\Controller;
 use Think\Controller;
 
 class AdminController extends Controller {
