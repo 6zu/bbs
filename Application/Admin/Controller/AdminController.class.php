@@ -17,10 +17,6 @@ class AdminController extends Controller {
 	public function admin_header(){
 		 $this->display();
 	}
-//添加班级
-public function class_add(){
-		 $this->display();
-	}
 //班级列表
 public function class_list(){
 		 $this->display();
