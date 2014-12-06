@@ -63,12 +63,17 @@
        <div id="menu">
         <ul class="left-menu">
           <li>
-			  <span><a href="">班级分类</a></span>
+              <span><a href="">导航管理</a></span>
+            <ul class="son">
+              <li><a href="/index.php/admin/url/add_url" target="opt">添加导航</a></li>
+              <li><a href="/index.php/admin/url/list_url" target="opt">导航列表</a></li>
+              </ul>
+	<span><a href="">班级分类</a></span>
             <ul class="son">
               <li><a href="/index.php/Admin/Admin/class_add" target="opt">添加班级</a></li>
               <li><a href="/index.php/Admin/Admin/class_list" target="opt">班级列表</a></li>
               
-
+              </ul>
 			<span><a href="">阶段分类</a></span>
             <ul class="son">
 			<li><a href="/index.php/Admin/Admin/stage_add" target="opt">添加阶段</a></li>
