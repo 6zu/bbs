@@ -6,31 +6,36 @@
 	<title></title>
 </head>
 <body>
-    <form action="/admin/School/add_class"  method="post">
+	<form action="" method="post">
 		<table class="table">
 			<tr >
-				<td class="th" colspan="2">添加班级</td>
+				<td class="th" colspan="2">添加阶段</td>
 			</tr>
 			<tr>
-				<td>班级名称</td>
-				<td><input type="text" name="class_name"/></td>
+				<td>阶段名称</td>
+				<td><input type="text" name=""/></td>
 			</tr>
 			<tr>
 				<td>开启状态</td>
 				<td>
-					<input type="radio" name="class_stu" value="1" checked="checked"/>开启
-					<input type="radio" name="class_stu" value="0" />关闭
+					<input type="radio" name="" value="1" checked="checked"/>开启
+					<input type="radio" name="" value="0" />关闭
 				</td>
 
 			</tr>
 			<tr>
-				<td>关键字</td>
-				<td><input type="text" name="class_key"/></td>
+				<td>所属课程</td>
+				<td>
+					<select name="">
+						<option value="" selected>
+						<option value="">
+					</select>
+				</td>
 			</tr>
 			<tr>
 				<td>描述</td>
 				<td>
-					<textarea name="class_desc" id="description" class="textarea"></textarea>
+					<textarea name="" id="description" class="textarea"></textarea>
 				</td>
 			</tr>
 			<tr>
