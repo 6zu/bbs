@@ -7,7 +7,7 @@
 	<link type="text/css" rel="stylesheet" href="/Public/admin/backend/css/bootstrap.css"/>
 	<link type="text/css" rel="stylesheet" href="/Public/admin/backend/css/home.css"/>
 	<link type="text/css" rel="stylesheet" href="/Public/admin/backend/css/public.css"/>
-
+<script type="text/javascript" src="/Public/admin/js/jq.js"></script>
   </head>
   <body style="padding:20px;">
     
@@ -22,7 +22,7 @@
                 <a href="#" class="minimize hide"></a>
             </div>
             <div class="content" style="display: block;">
-                    <p>你好，111</p>
+                    <p>你好，<?php echo ($name); ?></p>
                     <p>所属角色：超级管理员</p>
                     <p>上次登录时间：2014-10-24</p>
                     <p>上次登录IP：192.168.1.222</p>
@@ -142,16 +142,16 @@
           padding-left: 10px;
         }
         </style>
-<script type="text/javascript" src="http://www.houdunwang.com/hdjob/product/index.php/product/index/index/version/<?php echo ($hd["config"]["version"]); ?>/product/hdjob"></script>
+
 <script type="text/javascript">
   $('.title').hover(function(){
-    $(this).children('.minimize').removeClass('hide');
+       $(this).children('.minimize').removeClass('hide');
   },function(){
-    $(this).children('.minimize').addClass('hide');
+      $(this).children('.minimize').addClass('hide');
   });
-  $('.minimize').toggle(function(){
-    $(this).parent().next().slideUp();
-  },function(){
+     $('.minimize').toggle(function(){
+      $(this).parent().next().slideUp();
+    },function(){
     $(this).parent().next().slideDown();
   });
 </script>
