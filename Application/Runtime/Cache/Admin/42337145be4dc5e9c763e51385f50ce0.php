@@ -92,8 +92,8 @@
           <li>
 			  <span><a href="">就业信息</a></span>
             <ul class="son">
-              <li><a href="/index.php/Admin/Admin/stage_add" target="opt">添加就业信息</a></li>
-              <li><a href="/index.php/Admin/Admin/stage_list" target="opt">就业信息列表</a></li>
+              <li><a href="/index.php/admin/student/stu_add" target="opt">添加就业信息</a></li>
+              <li><a href="/index.php/admin/student/stu_list" target="opt">就业信息列表</a></li>
             </ul>
           </li>   
 		  
