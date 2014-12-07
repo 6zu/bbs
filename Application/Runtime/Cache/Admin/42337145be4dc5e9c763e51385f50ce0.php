@@ -110,8 +110,8 @@
 		 <li>
 		  			<span><a href="">教学视频管理</a></span>
           <ul class="son">
-              <li><a href="/index.php/Admin/Admin/video_add" target="opt">上传视频</a></li>
-              <li><a href="/index.php/Admin/Admin/video_list" target="opt">视频列表</a></li>
+            <li><a href="<?php echo U('video/video_add')?>" target="opt">上传视频</a></li>
+              <li><a href="<?php echo U('video/video_list')?>" target="opt">视频列表</a></li>
             </ul>
 		  </li>
           <li>
