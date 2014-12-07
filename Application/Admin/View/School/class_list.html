@@ -32,8 +32,13 @@
                             <td>开启</td>
                         </if>
 			<td>
-				<a href="">[关闭]</a>
-				<a href="">[编辑]</a>
+                               <if condition='$vo.class_stu eq 1'>
+                                <a href="/admin/School/up_class_stu?id={$vo.class_id}&stu=0">[关闭]</a>
+                                <else/>
+                                <a href="/admin/School/up_class_stu?id={$vo.class_id}&stu=1">[开启]</a>
+                                </if>
+				
+				<a href="/admin/School/up_class?id={$vo.class_id}">[编辑]</a>
 				<a href="/admin/School/del_class?id={$vo.class_id}" class="del">[删除]</a>
 			</td>
 		</tr>

@@ -6,36 +6,28 @@
 	<title></title>
 </head>
 <body>
-	<form action="" method="post">
+	<form action="/admin/School/add_class_leve" method="post">
 		<table class="table">
 			<tr >
 				<td class="th" colspan="2">添加阶段</td>
 			</tr>
 			<tr>
 				<td>阶段名称</td>
-				<td><input type="text" name=""/></td>
-			</tr>
-			<tr>
-				<td>开启状态</td>
-				<td>
-					<input type="radio" name="" value="1" checked="checked"/>开启
-					<input type="radio" name="" value="0" />关闭
-				</td>
-
+				<td><input type="text" name="class_leve_name"/></td>
 			</tr>
 			<tr>
 				<td>所属课程</td>
 				<td>
-					<select name="">
-						<option value="" selected>
-						<option value="">
+					<select name="class_name">
+                                           
+                                            <?php if(is_array($brand)): $i = 0; $__LIST__ = $brand;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["class_name"]); ?>"><?php echo ($vo["class_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 					</select>
 				</td>
 			</tr>
 			<tr>
 				<td>描述</td>
 				<td>
-					<textarea name="" id="description" class="textarea"></textarea>
+					<textarea name="class_leve_content" id="description" class="textarea"></textarea>
 				</td>
 			</tr>
 			<tr>
