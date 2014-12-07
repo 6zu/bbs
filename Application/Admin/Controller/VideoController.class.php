@@ -73,6 +73,7 @@ public function update(){
 public function video_update_pro(){
       $Video=M('video');
    $id=$_POST['h_id'];
+   $data = $Video->where("video_id=$id")->find();    
       if(!empty($_FILES['fenmian']['name'])){
       $config = array(
             'maxSize' => 3145728,
@@ -102,6 +103,10 @@ public function video_update_pro(){
               }
         }
       }else{
+		    if($data['video_name']==$_POST['name'] && $data['video_author']==$_POST['author'] && $data['video_path']==$_POST['video'] ){
+                $this->success('未做任何修改！','video_list');  
+                die;
+          }
               $data['video_name']=$_POST['name'];
               $data['video_author']=$_POST['author'];
                 $data['video_path']=$_POST['video'];
