@@ -30,7 +30,8 @@ class StudentController extends Controller {
 		 $size=1;
 		 //查询数据
 		 $User = M('student');
-		 $list = $User->page($_GET['p'].','.$size)->select();
+		 $p=$_GET['p']?$_GET['p']:1;
+		 $list = $User->page($p.','.$size)->select();
 		 $data['list']=$list;
 		//设置分页
 		 $count=$User->count();
@@ -46,23 +47,13 @@ class StudentController extends Controller {
 		添加就业信息
 	*/
 	public function stu_insert(){
-		// 实例化上传类
-		$upload = new \Think\Upload();
-		$upload->rootPath='Public/student/';
-		$upload->autoSub=false;
-		$upload->saveName=md5($_POST['name']);
-		$info=$upload->upload();    
-		if(!$info){
-			echo $upload->getError();    
-		}else{   
-			foreach($info as $file){        
-				$img='student/'.$file['savename'];
-				//插入数据
-				$User = M("student");
-				if($User->add(array(
+		$User = M("student");
+		if($_FILES['img']['error']==4)
+		{
+			if($User->add(array(
 						'student_name'=>$_POST['name'],
 						'student_school'=>$_POST['school'],
-						'student_img'=>$img,
+						'student_img'=>'',
 						'job_time'=>$_POST['time'],
 						'job_company'=>$_POST['company'],
 						'job_money'=>$_POST['money']
@@ -70,6 +61,34 @@ class StudentController extends Controller {
 					$this->info('成功','stu_info','继续添加','stu_list','查看列表');
 				}else{
 					$this->info('失败','','','stu_list','查看列表');
+				}
+		}
+		else
+		{
+			// 实例化上传类
+			$upload = new \Think\Upload();
+			$upload->rootPath='Public/student/';
+			$upload->autoSub=false;
+			$upload->saveName=md5($_POST['name']);
+			$info=$upload->upload();    
+			if(!$info){
+				echo $upload->getError();    
+			}else{   
+				foreach($info as $file){        
+					$img='student/'.$file['savename'];
+					//插入数据
+					if($User->add(array(
+							'student_name'=>$_POST['name'],
+							'student_school'=>$_POST['school'],
+							'student_img'=>$img,
+							'job_time'=>$_POST['time'],
+							'job_company'=>$_POST['company'],
+							'job_money'=>$_POST['money']
+						))){
+						$this->info('成功','stu_info','继续添加','stu_list','查看列表');
+					}else{
+						$this->info('失败','','','stu_list','查看列表');
+					}
 				}
 			}
 		}
@@ -89,9 +108,49 @@ class StudentController extends Controller {
 	*/
 	public function stu_update()
 	{
-		echo "<pre>";
-		print_r($_POST);
-		print_r($_FILES);
+		$User = M("student");
+		if($_FILES['img']['error']==4)
+		{
+			if($User->where('student_id='.$_POST['h_id'])->save(array(
+						'student_name'=>$_POST['name'],
+						'student_school'=>$_POST['school'],
+						'student_img'=>$_POST['old_img'],
+						'job_time'=>$_POST['time'],
+						'job_company'=>$_POST['company'],
+						'job_money'=>$_POST['money']
+					))){
+						$this->info('成功','','','stu_list','查看列表');
+					}else{
+						$this->info('失败','','','stu_list','查看列表');
+					}
+		}
+		else
+		{
+			$upload = new \Think\Upload();
+			$upload->rootPath='Public/student/';
+			$upload->autoSub=false;
+			$upload->saveName=md5($_POST['name']);
+			$info=$upload->upload();
+			if(!$info){
+				echo $upload->getError();
+			}else{   
+				foreach($info as $file){        
+					$img='student/'.$file['savename'];
+					if($User->where('student_id='.$_POST['h_id'])->save(array(
+							'student_name'=>$_POST['name'],
+							'student_school'=>$_POST['school'],
+							'student_img'=>$img,
+							'job_time'=>$_POST['time'],
+							'job_company'=>$_POST['company'],
+							'job_money'=>$_POST['money']
+						))){
+						$this->info('成功','','','stu_list','查看列表');
+					}else{
+						$this->info('失败','','','stu_list','查看列表');
+					}
+				}
+			}
+		}
 	}
 	/*
 		操作信息页面
