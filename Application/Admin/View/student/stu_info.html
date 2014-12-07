@@ -28,6 +28,7 @@
 				<td>学员相片</td>
 				<td>
 					<input type="file" name="img"/>
+					<?php if(!empty($info['student_img'])){ echo '已上传';}?>
 				</td>
 			</tr>
 			<tr>
