@@ -1,5 +1,4 @@
 <?php
-
 namespace Admin\Controller;
 use Think\Controller;
  use Think\Upload;
@@ -71,47 +70,50 @@ public function update(){
 }
 //修改视频处理
 public function video_update_pro(){
-      $Video=M('video');
+   $Video=M('video');
    $id=$_POST['h_id'];
-      if(!empty($_FILES['fenmian']['name'])){
-      $config = array(
-            'maxSize' => 3145728,
-          'saveName'   =>    array('uniqid',''),
-            'exts'=>array('jpg', 'gif', 'png', 'jpeg'),
-            'rootPath'=>'./Public/uploads/'
-            );
-        $upload = new \Think\Upload($config);// 实例化上传类
+   $data = $Video->where("video_id=$id")->find();    
+    if(!empty($_FILES['fenmian']['name'])){
+    $config = array(
+          'maxSize' => 3145728,
+        'saveName'   =>    array('uniqid',''),
+          'exts'=>array('jpg', 'gif', 'png', 'jpeg'),
+          'rootPath'=>'./Public/uploads/'
+          );
+    $upload = new \Think\Upload($config);// 实例化上传类
         // 上传文件 
-        
-        $info = $upload->upload(); 
-         $image=$info['fenmian']['savepath'].$info['fenmian']['savename'];
+    $info = $upload->upload(); 
+    $image=$info['fenmian']['savepath'].$info['fenmian']['savename'];
        
-        if(!$info) {// 上传错误提示错误信息
-            $this->error($upload->getError());
-        }else{// 上传成功
-             $image=$info['fenmian']['savepath'].$info['fenmian']['savename'];
-              $data['video_name']=$_POST['name'];
-              $data['video_author']=$_POST['author'];
-                $data['video_path']=$_POST['video'];
-              $data['video_img']=$image;
-              $a=$Video->where("video_id=$id")->save($data); 
-              if($a){
-                  $this->success('修改成功！','video_list');  
-              }else{
-                  $this->error('修改失败');     
-              }
-        }
-      }else{
-              $data['video_name']=$_POST['name'];
-              $data['video_author']=$_POST['author'];
-                $data['video_path']=$_POST['video'];
-                $a=$Video->where("video_id=$id")->save($data); 
-              if($a){
-                  $this->success('修改成功！','video_list');  
-              }else{
-                  $this->error('修改失败');
-                  
-              }
+    if(!$info) {// 上传错误提示错误信息
+        $this->error($upload->getError());
+    }else{// 上传成功
+         $image=$info['fenmian']['savepath'].$info['fenmian']['savename'];
+          $data['video_name']=$_POST['name'];
+          $data['video_author']=$_POST['author'];
+            $data['video_path']=$_POST['video'];
+          $data['video_img']=$image;
+          $a=$Video->where("video_id=$id")->save($data); 
+          if($a){
+              $this->success('修改成功！','video_list');  
+          }else{
+              $this->error('修改失败');     
+          }
+    }
+  }else{
+         if($data['video_name']==$_POST['name'] && $data['video_author']==$_POST['author'] && $data['video_path']==$_POST['video'] ){
+            $this->success('未做任何修改！','video_list');  
+            die;
+      }
+        $data['video_name']=$_POST['name'];
+        $data['video_author']=$_POST['author'];
+        $data['video_path']=$_POST['video'];
+        $a=$Video->where("video_id=$id")->save($data); 
+          if($a){
+              $this->success('修改成功！','video_list');  
+          }else{
+              $this->error('修改失败');
+          }
       }
      
 }
