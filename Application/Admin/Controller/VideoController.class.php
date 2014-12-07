@@ -1,5 +1,4 @@
 <?php
-
 namespace Admin\Controller;
 use Think\Controller;
  use Think\Upload;
