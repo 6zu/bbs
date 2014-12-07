@@ -7,7 +7,7 @@
 </head>
 <body>
 
-	<form action="/index.php/Admin/Student/<?php echo ($action); ?>" method="post" enctype="multipart/form-data">
+	<form action="/index.php/Admin/Student/<?php echo ($action); ?>" method="post" enctype="multipart/form-data" onsubmit="return check()">
 		<table class="table">
 			<tr>
 				<td class="th" colspan="2"><?php echo ($tag); ?>就业信息</td>
@@ -15,38 +15,38 @@
 			<tr>
 				<td width=5%>学员姓名</td>
 				<td>
-				<input type="text" name="name"  value="<?php if(isset($info)){ echo $info['student_name'];}?>"/>
+				<input type="text" name="name" id="name"value="<?php if(isset($info)){ echo $info['student_name'];}?>"/>
 				</td>
 			</tr>
 			<tr>
 				<td>毕业院校</td>
 				<td>
-				<input type="text" name="school"  value="<?php if(isset($info)){ echo $info['student_school'];}?>"/>
+				<input type="text" name="school" id="school" value="<?php if(isset($info)){ echo $info['student_school'];}?>"/>
 				</td>
 			</tr>
 			<tr>
 				<td>学员相片</td>
 				<td>
-					<input type="file" name="img"/>
+					<input type="file" name="img" id="img"/>
 					<?php if(!empty($info['student_img'])){ echo '已上传';}?>
 				</td>
 			</tr>
 			<tr>
 				<td>就业时间</td>
 				<td>
-					<input type="text" name="time"  value="<?php if(isset($info)){ echo $info['job_time'];}?>"/>
+					<input type="text" name="time" id="time" value="<?php if(isset($info)){ echo $info['job_time'];}?>"/>
 				</td>
 			</tr>
 			<tr>
 				<td>入职公司</td>
 				<td>
-					<input type="text" name="company" value="<?php if(isset($info)){ echo $info['job_company'];}?>"/>
+					<input type="text" name="company" id="company" value="<?php if(isset($info)){ echo $info['job_company'];}?>"/>
 				</td>
 			</tr>
 			<tr>
 				<td>薪资</td>
 				<td>
-					<input type="text" name="money" value="<?php if(isset($info)){ echo $info['job_money'];}?>"/>
+					<input type="text" name="money" id="money" value="<?php if(isset($info)){ echo $info['job_money'];}?>"/>
 				</td>
 			</tr>
 			<tr>
@@ -54,10 +54,43 @@
 					<input type="submit" value="<?php echo ($tag); ?>" class="input_button"/>
 					<input type="reset" class="input_button"/>
 					<input type="hidden" name="h_id" value="<?php echo ($h_id); ?>">
-					<input type="hidden" name="old_img" value="<?php if(isset($info)){ echo $info['student_img'];}?>">
+					<input type="hidden" name="old_img" value="<?php if(!empty($info['student_img'])){ echo $info['student_img'];}?>">
 				</td>
 			</tr>
 		</table>
 	</form>
 </body>
 </html>
+<script src='/Public/admin/js/jq.js'></script>
+<script type="text/javascript">
+<!--
+	function check()
+	{
+		if($('#name').val()=='')
+		{
+			alert('请填写学员姓名');
+			return false;
+		}
+		else if($('#school').val()=='')
+		{
+			alert('请填写毕业院校');
+			return false;
+		}
+		else if($('#time').val()=='')
+		{
+			alert('请填写就业时间');
+			return false;
+		}
+		else if($('#company').val()=='')
+		{
+			alert('请填写入职公司');
+			return false;
+		}
+		else if($('#money').val()=='')
+		{
+			alert('请填写薪资');
+			return false;
+		}
+	}
+//-->
+</script>

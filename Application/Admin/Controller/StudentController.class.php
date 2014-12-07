@@ -47,23 +47,13 @@ class StudentController extends Controller {
 		添加就业信息
 	*/
 	public function stu_insert(){
-		// 实例化上传类
-		$upload = new \Think\Upload();
-		$upload->rootPath='Public/student/';
-		$upload->autoSub=false;
-		$upload->saveName=md5($_POST['name']);
-		$info=$upload->upload();    
-		if(!$info){
-			echo $upload->getError();    
-		}else{   
-			foreach($info as $file){        
-				$img='student/'.$file['savename'];
-				//插入数据
-				$User = M("student");
-				if($User->add(array(
+		$User = M("student");
+		if($_FILES['img']['error']==4)
+		{
+			if($User->add(array(
 						'student_name'=>$_POST['name'],
 						'student_school'=>$_POST['school'],
-						'student_img'=>$img,
+						'student_img'=>'',
 						'job_time'=>$_POST['time'],
 						'job_company'=>$_POST['company'],
 						'job_money'=>$_POST['money']
@@ -71,6 +61,34 @@ class StudentController extends Controller {
 					$this->info('成功','stu_info','继续添加','stu_list','查看列表');
 				}else{
 					$this->info('失败','','','stu_list','查看列表');
+				}
+		}
+		else
+		{
+			// 实例化上传类
+			$upload = new \Think\Upload();
+			$upload->rootPath='Public/student/';
+			$upload->autoSub=false;
+			$upload->saveName=md5($_POST['name']);
+			$info=$upload->upload();    
+			if(!$info){
+				echo $upload->getError();    
+			}else{   
+				foreach($info as $file){        
+					$img='student/'.$file['savename'];
+					//插入数据
+					if($User->add(array(
+							'student_name'=>$_POST['name'],
+							'student_school'=>$_POST['school'],
+							'student_img'=>$img,
+							'job_time'=>$_POST['time'],
+							'job_company'=>$_POST['company'],
+							'job_money'=>$_POST['money']
+						))){
+						$this->info('成功','stu_info','继续添加','stu_list','查看列表');
+					}else{
+						$this->info('失败','','','stu_list','查看列表');
+					}
 				}
 			}
 		}
