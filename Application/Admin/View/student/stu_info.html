@@ -14,11 +14,15 @@
 			</tr>
 			<tr>
 				<td width=5%>学员姓名</td>
-				<td><input type="text" name="name"  value=""/></td>
+				<td>
+				<input type="text" name="name"  value="<?php if(isset($info)){ echo $info['student_name'];}?>"/>
+				</td>
 			</tr>
 			<tr>
 				<td>毕业院校</td>
-				<td><input type="text" name="school"  value=""/></td>
+				<td>
+				<input type="text" name="school"  value="<?php if(isset($info)){ echo $info['student_school'];}?>"/>
+				</td>
 			</tr>
 			<tr>
 				<td>学员相片</td>
@@ -29,26 +33,27 @@
 			<tr>
 				<td>就业时间</td>
 				<td>
-					<input type="text" name="time"  value=""/>
+					<input type="text" name="time"  value="<?php if(isset($info)){ echo $info['job_time'];}?>"/>
 				</td>
 			</tr>
 			<tr>
 				<td>入职公司</td>
 				<td>
-					<input type="text" name="company" value=""/>
+					<input type="text" name="company" value="<?php if(isset($info)){ echo $info['job_company'];}?>"/>
 				</td>
 			</tr>
 			<tr>
 				<td>薪资</td>
 				<td>
-					<input type="text" name="money" value=""/>
+					<input type="text" name="money" value="<?php if(isset($info)){ echo $info['job_money'];}?>"/>
 				</td>
 			</tr>
 			<tr>
 				<td colspan="2">
-					<input type="submit" value="添加" class="input_button"/>
+					<input type="submit" value="{$tag}" class="input_button"/>
 					<input type="reset" class="input_button"/>
-					<input type="hidden" name="h_id" value="">
+					<input type="hidden" name="h_id" value="{$h_id}">
+					<input type="hidden" name="old_img" value="<?php if(isset($info)){ echo $info['student_img'];}?>">
 				</td>
 			</tr>
 		</table>
