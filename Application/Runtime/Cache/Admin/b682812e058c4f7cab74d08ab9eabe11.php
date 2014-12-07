@@ -56,11 +56,10 @@
         </div>
 <script type="text/javascript">
         function gai(){
-                        //alert(111)
+                        var id= Math.round((Math.random()) * 100000000);
                         var yzma=document.getElementById("yzm");
 
-                                //jq("#yzm").attr("src","/index.php/index/verify_image");
-                        yzma.src="/index.php/Admin/Admin/yzm";
+                              yzma.src="/index.php/Admin/Admin/yzm?id="+id;
         }
 
         </script>
