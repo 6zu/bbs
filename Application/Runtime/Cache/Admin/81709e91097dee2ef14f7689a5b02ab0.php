@@ -18,16 +18,20 @@
 			<th>URL</th>
 			<th>操作</th>
 		</tr>
-		<tr>
+		<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><tr>
 			
-			<td><a href="">分类</a></td>
-			<td>开启</td>
+			
+			
+                                                               <td><?php echo ($list["nav_name"]); ?></td> 
+                                                               <td><?php echo ($list["nav_url"]); ?></td>
+                                                               
+                                                        
 			<td>
 				<a href="">[关闭]</a>
 				<a href="">[编辑]</a>
 				<a href="" class="del">[删除]</a>
 			</td>
-		</tr>
+		</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 	</table>
 		<div class="page">
 			<a href="">1</a>

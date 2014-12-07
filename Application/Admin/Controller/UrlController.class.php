@@ -10,7 +10,7 @@ class UrlController extends Controller {
     public function list_url(){
         $list=D(nav);
         $data=$list->select();
-        $this->display('data',$data);
+        $this->assign('data',$data);
         $this->display();
     }
 }
