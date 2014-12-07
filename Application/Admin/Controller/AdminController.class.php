@@ -9,7 +9,7 @@ class AdminController extends Controller {
     public function index(){
       $this->display();
     }
-    
+
     //处理登陆
     public function admin_login_pro(){
         //print_r($_POST);
@@ -48,6 +48,7 @@ class AdminController extends Controller {
         $Verify->codeSet = '0123456789'; 
         $Verify->entry();
     }
+
 	//右
     public function admin_main(){
         

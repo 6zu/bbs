@@ -6,33 +6,28 @@
 	<title></title>
 </head>
 <body>
-	<form action="" method="post">
+	<form action="/admin/School/add_teacher" method="post" enctype="multipart/form-data">
 		<table class="table">
 			<tr >
 				<td class="th" colspan="2">教师阶段</td>
 			</tr>
 			<tr>
 				<td>教师名称</td>
-				<td><input type="text" name=""/></td>
+				<td><input type="text" name="teacher_name"/></td>
 			</tr>
 			<tr>
 				<td>所属职位</td>
-				<td>
-					<select name="">
-						<option value="" selected>
-						<option value="">
-					</select>
-				</td>
+				<td><input type="text" name="teacher_job"/></td>
 
 			</tr>
 			<tr>
 				<td>上传头像</td>
-				<td><input type="file" name=""/></td>
+				<td><input type="file" name="teacher_img"/></td>
 			</tr>
 			<tr>
 				<td>描述</td>
 				<td>
-					<textarea name="" id="description" class="textarea"></textarea>
+					<textarea name="teacher_desc" id="description" class="textarea"></textarea>
 				</td>
 			</tr>
 			<tr>
