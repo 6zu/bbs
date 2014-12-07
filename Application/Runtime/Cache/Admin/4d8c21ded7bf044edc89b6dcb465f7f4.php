@@ -30,9 +30,13 @@
                         <tr>
                                 <td>开启状态</td>
                                 <td>
-                                    
-                                        <input type="radio" name="is_show" value="1" checked="checked"/>开启
+                                     <?php if($data["is_show"] == 1): ?><input type="radio" name="is_show" value="1" checked="checked"/>开启
+                                     
                                         <input type="radio" name="is_show" value="0" />关闭
+                                      <?php else: ?>
+                                      <input type="radio" name="is_show" value="1"/>开启
+                                     
+                                        <input type="radio" name="is_show" value="0"  checked="checked"/>关闭<?php endif; ?>
                                 </td>
 
                         </tr>
