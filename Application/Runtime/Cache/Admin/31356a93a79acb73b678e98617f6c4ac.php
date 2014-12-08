@@ -37,7 +37,7 @@
                         <tr>
                                 <td>排序</td>
                                 <td>
-                                <input type="text" name="sort" value="1"/>开启
+                                <input type="text" name="sort" value="1"/>
 
                                 </td>
 
