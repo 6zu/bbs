@@ -51,23 +51,10 @@
         </div>
         <div class="clear"></div>
     <ul id="nav">
-      <!--    
-        <li><a href="http://php.itcast.cn" id="nav_main">首 页</a></li>
-        <li class="widt"><a href="http://php.itcast.cn/php/course.shtml" >PHP培训课程</a> </li> 
-        <li class="widt"><a href="http://php.itcast.cn/php/video.shtml" id="nav_videodl">PHP视频下载</a> </li>
-        <li id="nav_personnel"><a href="http://www.itcast.cn/channel/personnel.shtml">人才服务</a></li>
-        <li id="nav_life"><a href="http://www.itcast.cn/channel/campus.shtml">校园生活</a> </li>
-        <li id="nav_teacher"><a href="http://php.itcast.cn/php/teacher.shtml">师资力量</a> </li>
-        <li id="nav_job"><a href="http://php.itcast.cn/php/jyjb.shtml">就业信息</a> </li>
-        <li id="nav_flow"><a href="http://www.itcast.cn/channel/flow.shtml">报名流程</a> </li>
-        <li id="nav_book"><a href="http://www.itcast.cn/channel/book.shtml">原创教材</a> </li>
-        <li id="nav_question"><a href="/php/question.shtml">常见问题</a></li>
-        <li><a href="http://www.itcast.cn/channel/contact.shtml">来校路线</a></li>
-        <li><a href="http://bbs.itcast.cn" target="_blank">技术论坛 </a></li>
-          -->
+     
         
           <volist name="data" id="vo" >
-              <li><a href="{$vo.nav_url}" >{$vo.nav_name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+              <li><a href="{$vo.nav_url}" >&nbsp;&nbsp;{$vo.nav_name}&nbsp;&nbsp;&nbsp;</a></li>
           </volist>
 </ul>
         </div>
