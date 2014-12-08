@@ -1,0 +1,9 @@
+[ 2014-12-08T18:49:39+08:00 ] 127.0.0.1 /home/video/
+ERR: Think\Controller:kaibanxinxi方法不存在！
+
+[ 2014-12-08T18:49:54+08:00 ] 127.0.0.1 /home/video/
+ERR: 模板不存在:./Application/Home/View/Video/index.html
+
+[ 2014-12-08T18:50:18+08:00 ] 127.0.0.1 /home/video/
+ERR: 模板不存在:./Application/Home/View/Video/index.html
+
