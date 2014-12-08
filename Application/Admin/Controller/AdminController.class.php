@@ -16,14 +16,14 @@ class AdminController extends Controller {
         $name=$_POST['admin_name'];
         $pwd=$_POST['admin_pwd'];
         $verify = new \Think\Verify();   
-        if(empty($verify->check($code, $id=''))){
+        if($verify->check($code, $id='')==""){
             $this->error("验证码错误");
         }else{
             $admin_user = D('admin');
             $data = $admin_user->where("admin_name='".$name."'")->find();
             //echo $admin_user->getLastSql();
             //dump($data);
-            if(!empty($data)){
+            if($data!=""){
                   if($data['admin_pass']=md5($pwd)){
                     //  $this->redirect();
                     session('name',$name); 
