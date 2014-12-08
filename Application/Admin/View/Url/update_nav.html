@@ -30,9 +30,15 @@
                         <tr>
                                 <td>开启状态</td>
                                 <td>
-                                    
+                                     <if condition="$data.is_show eq 1">
                                         <input type="radio" name="is_show" value="1" checked="checked"/>开启
+                                     
                                         <input type="radio" name="is_show" value="0" />关闭
+                                      <else/>
+                                      <input type="radio" name="is_show" value="1"/>开启
+                                     
+                                        <input type="radio" name="is_show" value="0"  checked="checked"/>关闭
+                                     </if>
                                 </td>
 
                         </tr>
