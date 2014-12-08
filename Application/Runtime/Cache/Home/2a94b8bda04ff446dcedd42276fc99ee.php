@@ -50,22 +50,27 @@
                 <p class="fr"><img src="/Public/images/topword.gif" alt="改变中国教育，我们正在行动..." class="png"/></p>
         </div>
         <div class="clear"></div>
-                <ul id="nav">
+    <ul id="nav">
+      <!--    
         <li><a href="http://php.itcast.cn" id="nav_main">首 页</a></li>
-        <li class="widt"><a href="http://php.itcast.cn/php/course.shtml" id="nav_course">PHP培训课程</a> </li> 
+        <li class="widt"><a href="http://php.itcast.cn/php/course.shtml" >PHP培训课程</a> </li> 
         <li class="widt"><a href="http://php.itcast.cn/php/video.shtml" id="nav_videodl">PHP视频下载</a> </li>
-    <li id="nav_personnel"><a href="http://www.itcast.cn/channel/personnel.shtml">人才服务</a></li>
-    <li id="nav_life"><a href="http://www.itcast.cn/channel/campus.shtml">校园生活</a> </li>
-    <li id="nav_teacher"><a href="http://php.itcast.cn/php/teacher.shtml">师资力量</a> </li>
-    <li id="nav_job"><a href="http://php.itcast.cn/php/jyjb.shtml">就业信息</a> </li>
-    <li id="nav_flow"><a href="http://www.itcast.cn/channel/flow.shtml">报名流程</a> </li>
-    <li id="nav_book"><a href="http://www.itcast.cn/channel/book.shtml">原创教材</a> </li>
+        <li id="nav_personnel"><a href="http://www.itcast.cn/channel/personnel.shtml">人才服务</a></li>
+        <li id="nav_life"><a href="http://www.itcast.cn/channel/campus.shtml">校园生活</a> </li>
+        <li id="nav_teacher"><a href="http://php.itcast.cn/php/teacher.shtml">师资力量</a> </li>
+        <li id="nav_job"><a href="http://php.itcast.cn/php/jyjb.shtml">就业信息</a> </li>
+        <li id="nav_flow"><a href="http://www.itcast.cn/channel/flow.shtml">报名流程</a> </li>
+        <li id="nav_book"><a href="http://www.itcast.cn/channel/book.shtml">原创教材</a> </li>
         <li id="nav_question"><a href="/php/question.shtml">常见问题</a></li>
         <li><a href="http://www.itcast.cn/channel/contact.shtml">来校路线</a></li>
         <li><a href="http://bbs.itcast.cn" target="_blank">技术论坛 </a></li>
+          -->
+        
+          <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><a href="<?php echo ($vo["nav_url"]); ?>" ><?php echo ($vo["nav_name"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 </ul>
         </div>
 
+    
         <div id="box">
                   
                           <div id="left" class="fl"  style="margin-top:3px;">
@@ -545,8 +550,10 @@
 </div>
 </div>
 <!-- 友情链接 -->
-
-        <!-- 页面底部 -->
+ 
+    
+    
+            <!-- 页面底部 -->
 <div id="footer">
   <div class="footer_info">
     <p class="fl mar"><!--<img src="/images/footlogo.jpg" />--></p>
@@ -560,6 +567,7 @@
   </div>
 </div>
 <!-- 页面底部 -->
+
 <!-- 营销QQ统计 -->
 <!-- WPA Button Begin -->
 <script type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDA2ODg2OF8xNTA3NV84MDAwNjg4Njhf"></script>
