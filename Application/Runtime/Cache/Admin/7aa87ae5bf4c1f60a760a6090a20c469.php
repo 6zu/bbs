@@ -11,7 +11,7 @@
 <body>
 	<table class="table">
 		<tr>
-			<td class="th" colspan="10">阶段列表</td>
+			<td class="th" colspan="10">视频列表</td>
 		</tr>
 		<tr>
 			<th>CID</th>
