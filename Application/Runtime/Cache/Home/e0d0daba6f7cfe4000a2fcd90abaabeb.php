@@ -158,7 +158,7 @@
 </ul>
 
 			</div>
-			<div class="rightbottom"><img src="/images/rightbottom.jpg"/></div>
+			<div class="rightbottom"><img src="/Public/images/rightbottom.jpg"/></div>
 			<h4 class="righttitle1 lianxi"><span class="fl"><span class="blue">课程</span>咨询</span></h4>
 			
 			<div class="rightkuang">

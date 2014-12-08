@@ -9,6 +9,7 @@
 <link href="/Public/style/nav_main.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/imageswitch.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/webim.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/nav_course.css" type="text/css" rel="stylesheet" />
 <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" /> 
 <script type="text/javascript" src="/Public/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="/Public/js/imageschange.js"></script>
@@ -398,6 +399,7 @@
         DD_belatedPNG.fix('titZx');
     </script>
 <![endif]-->
+
 <LINK rel=stylesheet type=text/css href="/Public/kefu/css/common.css">
 <!--[if lte IE 6]>
 <link type="text/css" rel="stylesheet" href="/kefu/css/ie.css" mce_href="/kefu/css/ie.css" />
@@ -405,7 +407,7 @@
 <SCRIPT type=text/javascript src="/Public/kefu/js/jquery.js"></SCRIPT>
 <SCRIPT type=text/javascript src="/Public/kefu/js/kefu.js"></SCRIPT>
 <SCRIPT type=text/javascript>kfguin="800068868";ws="www.itcast.cn"; companyname=""; welcomeword=""; type="1";</SCRIPT>
-<SCRIPT src="/Public/kefu/js/kf.js" type=text/javascript></SCRIPT>
+
 <link href="/Public/kefu2/css/init.css" mce_href="/Public/kefu2/css/init.css" rel="stylesheet" type="text/css"   />
 <link href="/Public/kefu2/css/kefu.css" mce_href="/Public/kefu2/css/kefu.css" rel="stylesheet" type="text/css" />
 <!--[if lte IE 6]>
