@@ -85,9 +85,12 @@
 <div class="fl">
 <div class="imagecontainer" id="idTransformView2">
 <ul class="slider slider2" id="idSlider2">
-<li><a href="http://php.itcast.cn/subject/phpwzlx/index.shtml" target="_blank"><img alt="王者来袭--只做中国PHP培训界的领航者!" src="http://www.itcast.cn/files/image/201405/20140507122631634.jpg" style="width: 297px; height: 216px;" /></a></li>
-<li><a href="http://php.itcast.cn/news/20140904/1456540144.shtml?yuanchao" target="_blank"><img alt="【精英访谈】PHP袁超：叛逆少年的成长" src="http://www.itcast.cn/files/image/201409/20140902180947196.jpg" style="width: 297px; height: 216px;" /></a></li>
-<li><a href="http://php.itcast.cn/subject/phpzly/index.html" target="_blank"><img alt="学PHP编程,不做孬种程序员" src="http://www.itcast.cn/files/image/201405/20140528133631480.jpg" style="width: 297px; height: 216px;" /></a></li>
+<li>
+<a href="http://php.itcast.cn/subject/phpwzlx/index.shtml" target="_blank">
+<img alt="王者来袭--只做中国PHP培训界的领航者!" src="/Public/images/703399.jpg" style="width: 297px; height: 216px;" /></a></li>
+<li><a href="http://php.itcast.cn/news/20140904/1456540144.shtml?yuanchao" target="_blank">
+<img alt="【精英访谈】PHP袁超：叛逆少年的成长" src="/Public/images/960837.jpg" style="width: 297px; height: 216px;" /></a></li>
+<li><a href="http://php.itcast.cn/subject/phpzly/index.html" target="_blank"><img alt="学PHP编程,不做孬种程序员" src="/Public/images/703403.jpg" style="width: 297px; height: 216px;" /></a></li>
 </ul>
 <ul class="num" id="idNum2">
 <li>1</li>
@@ -298,7 +301,9 @@
 <h4 class="righttitle1" style="margin-top:10px;"><span class="fl">PHP培训开班信息</span></h4>
 <div class="jyjb-left" >
 <ul>
-<li style="border-bottom: medium none; float: left; color: #515151"><a href="http://php.itcast.cn/php/course/base.shtml"><b><font style="color: #515151">PHP基础班</font></b></a></li>
+<li style="border-bottom: medium none; float: left; color: #515151">
+
+<a href="http://php.itcast.cn/php/course/base.shtml"><b><font style="color: #515151">PHP基础班</font></b></a></li>
 <br />
 </ul>
 <ul style="clear: both">
