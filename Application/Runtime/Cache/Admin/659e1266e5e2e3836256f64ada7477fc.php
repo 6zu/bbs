@@ -17,6 +17,7 @@
 			<th>班级名称</th>
                         <th>关键字</th>
 			<th>描述</th>
+                        <th>图片</th>
                         <th>状态</th>
 			<th>操作</th>
 		</tr>
@@ -25,6 +26,7 @@
                         <td><?php echo ($vo["class_name"]); ?></td>
 			<td><?php echo ($vo["class_key"]); ?></td>
                         <td><?php echo ($vo["class_desc"]); ?></td>
+                        <td><img src ="/Public/Uploads/<?php echo ($vo["class_img"]); ?>" width="30px" height="30px"></td>
 			<?php if($vo["class_stu"] == 0): ?><td>关闭</td>
                             <?php else: ?>
                             <td>开启</td><?php endif; ?>

@@ -6,7 +6,7 @@
 	<title></title>
 </head>
 <body>
-    <form action="/admin/School/add_class"  method="post">
+    <form action="/admin/School/add_class"  method="post" enctype="multipart/form-data">
 		<table class="table">
 			<tr >
 				<td class="th" colspan="2">添加班级</td>
@@ -26,6 +26,10 @@
 			<tr>
 				<td>关键字</td>
 				<td><input type="text" name="class_key"/></td>
+			</tr>
+                        <tr>
+				<td>上传图片</td>
+				<td><input type="file" name="class_img"/></td>
 			</tr>
 			<tr>
 				<td>描述</td>
