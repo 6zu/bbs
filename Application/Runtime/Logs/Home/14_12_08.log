@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [ 2014-12-08T20:41:11+08:00 ] 127.0.0.1 /home/peixun/index
 ERR: 无法加载控制器:Peixun
 
@@ -36,4 +37,37 @@ ERR: 系统不支持:memcache
 
 [ 2014-12-08T21:15:45+08:00 ] 127.0.0.1 /home/School/index
 ERR: 系统不支持:memcache
+=======
+<<<<<<< HEAD
+[ 2014-12-08T18:41:31+08:00 ] 127.0.0.1 /home/School/index
+ERR: 无法加载控制器:School
+
+[ 2014-12-08T20:12:03+08:00 ] 127.0.0.1 /home/video/index
+ERR: 无法加载控制器:Video
+=======
+[ 2014-12-08T18:49:39+08:00 ] 127.0.0.1 /home/video/
+ERR: Think\Controller:kaibanxinxi方法不存在！
+
+[ 2014-12-08T18:49:54+08:00 ] 127.0.0.1 /home/video/
+ERR: 模板不存在:./Application/Home/View/Video/index.html
+
+[ 2014-12-08T18:50:18+08:00 ] 127.0.0.1 /home/video/
+ERR: 模板不存在:./Application/Home/View/Video/index.html
+>>>>>>> 6925cdb41870575334b4e66442f8c26dd12785fb
+
+[ 2014-12-08T20:40:16+08:00 ] 127.0.0.1 /home/peixun/index
+ERR: 无法加载控制器:Peixun
+
+[ 2014-12-08T20:40:26+08:00 ] 127.0.0.1 /home/School/index
+ERR: 无法加载控制器:School
+
+[ 2014-12-08T20:40:39+08:00 ] 127.0.0.1 /home/Student/jishu.php
+ERR: 非法操作:jishu.php
+
+[ 2014-12-08T20:40:43+08:00 ] 127.0.0.1 /home/School/index
+ERR: 无法加载控制器:School
+
+[ 2014-12-08T20:40:48+08:00 ] 127.0.0.1 /home/School/
+ERR: 无法加载控制器:School
+>>>>>>> fed339726aebdc4ca7bf0f4131cbad07dca3c939
 
