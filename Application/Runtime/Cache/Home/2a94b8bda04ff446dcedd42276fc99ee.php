@@ -101,19 +101,23 @@
 </div>
 <div class="fr shouye">
 <ul>
-<li><a href="http://php.itcast.cn/news/20131128/10173894392.shtml"><img alt="传智播客php" src="http://www.itcast.cn/files/image/201311/20131128145416257.jpg" style="width:142px; height: 87px" /></a></li>
+<li><a href="http://php.itcast.cn/news/20131128/10173894392.shtml">
+<img alt="传智播客php" src="http://www.itcast.cn/files/image/201311/20131128145416257.jpg" style="width:142px; height: 87px" /></a></li>
 <li><a class="style3" href="http://php.itcast.cn/news/20131128/10173894392.shtml">曹伟-玩酷我的程序人生</a></li>
 </ul>
 <ul>
-<li><a href="http://php.itcast.cn/news/20140530/12533844406.shtml"><img alt="传智播客php" src="http://www.itcast.cn/files/image/201405/20140530160404923.jpg" style="width: 142px; height: 87px;" /></a></li>
+<li><a href="http://php.itcast.cn/news/20140530/12533844406.shtml">
+        <img alt="传智播客php" src="http://www.itcast.cn/files/image/201405/20140530160404923.jpg" style="width: 142px; height: 87px;" /></a></li>
 <li><a class="style3" href="http://php.itcast.cn/news/20140530/12533844406.shtml">王东方-辣妈挑战PHP </a></li>
 </ul>
 <ul>
-<li><a href="http://php.itcast.cn/news/20140304/14023889982.shtml"><img alt="传智播客php" src="http://www.itcast.cn/files/image/201403/20140305143355584.jpg" style="width: 142px; height: 87px" /></a></li>
+<li><a href="http://php.itcast.cn/news/20140304/14023889982.shtml">
+        <img alt="传智播客php" src="http://www.itcast.cn/files/image/201403/20140305143355584.jpg" style="width: 142px; height: 87px" /></a></li>
 <li><a class="style3" href="http://php.itcast.cn/news/20140304/14023889982.shtml">康红红专题-因为爱情</a></li>
 </ul>
 <ul>
-<li><a href="http://php.itcast.cn/news/20130924/17493348861.shtml"><img alt="传智播客php" src="http://php.itcast.cn/files/image/201309/20130925173127783.jpg" style="width: 142px; height: 87px" /></a></li>
+<li><a href="http://php.itcast.cn/news/20130924/17493348861.shtml">
+        <img alt="传智播客php" src="http://php.itcast.cn/files/image/201309/20130925173127783.jpg" style="width: 142px; height: 87px" /></a></li>
 <li><a class="style3" href="http://php.itcast.cn/news/20130924/17493348861.shtml">陈建利专题-我有我原则 </a></li>
 </ul>
 </div>
@@ -202,6 +206,7 @@
 <dd class="huodongfr">
 <h3 class="STYLE7">就业信息</h3>
 <ul class="bjhd">
+<!--
 <li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml">张＊ 2014.10.22 &nbsp;北京树蛙＊＊ &nbsp;6000</a></li>
 <li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml">粟＊＊ 2014.10.21 &nbsp;智恒＊＊ &nbsp;5000</a></li>
 <li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml">王＊＊ 2014.10.20&nbsp; 淘伟＊＊公司 &nbsp;&nbsp;6000</a></li>
@@ -211,6 +216,8 @@
 <li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml">曹＊ 2014.10.14 &nbsp;国度＊＊公司 &nbsp;7000</a></li>
 <li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml">陈＊＊ 2014.10.13 &nbsp;北京弗兰＊＊公司 &nbsp;5500</a></li>
 <li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml"><font style="color: red"><b>&gt;&gt;查看更多就业信息</b></font></a></li>
+-->
+<?php if(is_array($data2)): $i = 0; $__LIST__ = $data2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml"><?php echo ($vo["student_name"]); ?> <?php echo ($vo["job_time"]); ?> &nbsp;<?php echo ($vo["job_company"]); ?> &nbsp;<?php echo ($vo["job_money"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 </ul>
 </dd>
 </dl>
@@ -300,36 +307,26 @@
 <div id="right" class="fl">	
 <h4 class="righttitle1" style="margin-top:10px;"><span class="fl">PHP培训开班信息</span></h4>
 <div class="jyjb-left" >
-<ul>
+      <?php if(is_array($data1)): $i = 0; $__LIST__ = $data1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><ul>
+    <!--
 <li style="border-bottom: medium none; float: left; color: #515151">
 
 <a href="http://php.itcast.cn/php/course/base.shtml"><b><font style="color: #515151">PHP基础班</font></b></a></li>
 <br />
+    -->
+  
+        <li style="border-bottom: medium none; float: left; color: #515151">
+
+        <a href="http://php.itcast.cn/php/course/base.shtml"><b><font style="color: #515151"><?php echo ($vo["class_name"]); ?></font></b></a></li></br>
+    
 </ul>
-<ul style="clear: both">
-<li><a href="http://php.itcast.cn/php/course/base.shtml" target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>北京--第34期(2015年01月10号)</a></li>
-<li><a href="http://php.itcast.cn/php/course/base.shtml" target="_blank"><span class="time jyjb-font1"><b>爆满已开班</b></span>北京--第33期(2014年11月27号)</a></li>
-<li><a href="http://php.itcast.cn/php/course/base.shtml" target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>广州--第08期(2014年12月25号)</a></li>
-</ul>
-<ul>
-<li style="border-bottom: medium none; float: left; color: #515151"><a href="http://php.itcast.cn/php/course/php.shtml"><b><font style="color: #515151">PHP就业班</font></b></a></li>
-<br />
-</ul>
-<ul style="clear: both">
-<li><a href="http://php.itcast.cn/php/course/php.shtml" target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>北京--第34期(2015年01月05号)</a></li>
-<li><a href="http://php.itcast.cn/php/course/php.shtml" target="_blank"><span class="time jyjb-font1"><b>爆满已开班</b></span>北京--第33期(2014年11月21号)</a></li>
-<li><a href="http://php.itcast.cn/php/course/php.shtml" target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>广州--第07期(2014年12月18号)</a></li>
-</ul>
-<ul>
-<li style="border-bottom: medium none; float: left; color: #515151"><a href="http://php.itcast.cn/news/981030b0/96d5/4005/9ae4/eba8bac4195a.shtml"><b><font style="color: #515151">PHP远程班</font></b></a></li>
-<br />
-</ul>
-<ul style="clear: both">
-<li><a href="http://php.itcast.cn/news/981030b0/96d5/4005/9ae4/eba8bac4195a.shtml" target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>基础班--第34期(2015年01月10号)</a></li>
-<li><a href="http://php.itcast.cn/news/981030b0/96d5/4005/9ae4/eba8bac4195a.shtml" target="_blank"><span class="time jyjb-font1"><b>爆满已开班</b></span>基础班--第33期(2014年11月27号)</a></li>
-<li><a href="http://php.itcast.cn/news/981030b0/96d5/4005/9ae4/eba8bac4195a.shtml" target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>就业班--第34期(2015年01月05号)</a></li>
-<li><a href="http://php.itcast.cn/news/981030b0/96d5/4005/9ae4/eba8bac4195a.shtml" target="_blank"><span class="time jyjb-font1"><b>爆满已开班</b></span>就业班--第33期(2014年11月21号)</a></li>
-</ul>
+          <ul style="clear: both">
+<li><a  target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>北京--第34期(2015年01月10号)</a></li>
+<li><a  target="_blank"><span class="time jyjb-font1"><b>爆满已开班</b></span>北京--第33期(2014年11月27号)</a></li>
+<li><a  target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>广州--第08期(2014年12月25号)</a></li>
+</ul><?php endforeach; endif; else: echo "" ;endif; ?>
+
+
 
 </div>
 <div class="rightbottom"><img src="/Public/images/rightbottom.jpg"  /></div>		
@@ -342,43 +339,6 @@
 <td class="td1" width="73%"><a href="http://www.itcast.cn/news/20141201/16233788127.shtml" target="_blank">上海北岸信息生物谷招聘</a></td>
 <td width="11%">若干</td>
 <td width="16%">11.28</td>
-</tr>
-<tr>
-<td class="td1" width="73%"><a href="http://www.itcast.cn/news/20141201/16302725269.shtml" target="_blank">TCL数码科技有限公司招聘</a></td>
-<td width="11%">若干</td>
-<td width="16%">11.28</td>
-</tr>
-<tr>
-<td class="td1" width="73%"><a href="http://www.itcast.cn/news/20141201/16292068856.shtml" target="_blank">博雅软件集团有限公司招聘</a></td>
-<td width="11%">若干</td>
-<td width="16%">11.28</td>
-</tr>
-<tr>
-<td class="td1" width="73%"><a href="http://www.itcast.cn/news/20141201/16242833345.shtml" target="_blank">北京南天信息有限公司招聘</a></td>
-<td width="11%">若干</td>
-<td width="16%">11.28</td>
-</tr>
-<tr>
-<td class="td1" width="73%"><a href="http://www.itcast.cn/news/20141201/16223017278.shtml" target="_blank">北京十方元基科技公司招聘</a></td>
-<td width="11%">若干</td>
-<td width="16%">11.28</td>
-</tr>
-<tr>
-<td class="td1" width="73%"><a href="http://www.itcast.cn/news/20141201/16213222025.shtml" target="_blank">北京天舟通信有限公司招聘</a></td>
-<td width="11%">若干</td>
-<td width="16%">11.28</td>
-</tr>
-<tr></tr>
-<tr>
-<td class="td1" width="73%"><a href="http://www.itcast.cn/news/20141201/16183668306.shtml" target="_blank">北京新玛互动传媒公司招聘</a></td>
-<td width="11%">若干</td>
-<td width="16%">11.28</td>
-</tr>
-<tr></tr>
-<tr>
-<td class="td1" width="73%"><a href="http://www.itcast.cn/news/20141201/1617416903.shtml" target="_blank">北京缔凡思信息技术公司招聘</a></td>
-<td width="11%">若干</td>
-<td width="16%">11.21</td>
 </tr>
 <tr>
 <td class="td1" width="73%"><a href="http://www.itcast.cn/news/20141201/16165624603.shtml" target="_blank">北京韩购街贸易有限公司招聘</a></td>
@@ -430,18 +390,6 @@
 <li><a href="/news/38f18d98/e496/4c46/9561/5c14558c4394.shtml" target="_blank">你们PHP培训的费用这么低，不怕别人说&quot;便宜没好货&quot;吗？签协议工作有保障吗？</a></li>
 <li><a href="/news/ec9cdb54/95e8/4d2a/862b/0e7213e7f254.shtml" target="_blank">你们的PHP培训质量有保证吗？</a></li>
 <li><a href="/news/23700cbd/742d/46ab/b40a/921b780819e0.shtml" target="_blank">你们的课程安排，是怎么样的？</a></li>
-<li><a href="/news/bae6d679/af68/4f9b/a015/bb94d3e517b6.shtml" target="_blank">你们有没有阳光扶持政策，可以后交学费?</a></li>
-<!--<li><a href="http://php.itcast.cn/news/20130409/11325021761.shtml" target="_blank">学完PHP之后可以做什么？</a></li>-->
-<li><a href="http://php.itcast.cn/news/20130409/11334990300.shtml" target="_blank">前端的东西能学多少，有哪些？</a></li>
-<li><a href="http://php.itcast.cn/news/20130409/14473489532.shtml" target="_blank">PHP学完就业时都能出哪些类型的网站？</a></li>
-<li><a href="http://php.itcast.cn/news/20130409/14524497859.shtml" target="_blank">官网上为什么公布那么少PHP的招生公司？</a></li>
-<li><a href="http://php.itcast.cn/news/20130409/14543187053.shtml" target="_blank">用PHP做出来的比较有名气的网站或者作品？</a></li>
-<!--<li><a href="http://php.itcast.cn/news/20130409/14565887024.shtml" target="_blank">怎么在短时间内充分掌握老师讲解的知识？</a></li>
-<li><a href="http://php.itcast.cn/news/20130409/14580258105.shtml" target="_blank">基础班学完以后可以做什么?</a></li>
-<li><a href="http://php.itcast.cn/news/20130409/15025732993.shtml" target="_blank">PHP入门简单是不是后期学习难？</a></li>
-<li><a href="http://php.itcast.cn/news/20130723/1156494103.shtml" target="_blank">传智播客PHP培训远程班学费与课程安排？</a></li>
-<li><a href="http://php.itcast.cn/news/20130409/15001772469.shtml" target="_blank">学php需要具备哪些条件？</a></li>--></ul>
-
 </ul> 
 <div class="clear"></div>
 	 <p class="text-r"><a href="/php/question.shtml">
@@ -590,7 +538,7 @@
 <SCRIPT type=text/javascript src="/Public/kefu/js/jquery.js"></SCRIPT>
 <SCRIPT type=text/javascript src="/Public/kefu/js/kefu.js"></SCRIPT>
 <SCRIPT type=text/javascript>kfguin="800068868";ws="www.itcast.cn"; companyname=""; welcomeword=""; type="1";</SCRIPT>
-<SCRIPT src="/Public/kefu/js/kf.js" type=text/javascript></SCRIPT>
+
 <link href="/Public/kefu2/css/init.css" mce_href="/Public/kefu2/css/init.css" rel="stylesheet" type="text/css"   />
 <link href="/Public/kefu2/css/kefu.css" mce_href="/Public/kefu2/css/kefu.css" rel="stylesheet" type="text/css" />
 <!--[if lte IE 6]>

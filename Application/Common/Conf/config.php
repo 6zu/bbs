@@ -9,7 +9,6 @@ return array(
         'DB_PORT'   => 3306, // 端口
         'DB_PREFIX' => 'bbs_', // 数据库表前缀 
         'DB_CHARSET'=> 'utf8', // 字符集
-		'SHOW_PAGE_TRACE' =>true,//页面调试信息
-		//'LAYOUT_ON'=>true,
-		//'LAYOUT_NAME'=>'public/layout',
+        'SHOW_PAGE_TRACE' =>true,//页面调试信息
+		
 );
