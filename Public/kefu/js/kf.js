@@ -1,5 +1,5 @@
 var online= new Array();
-var urlroot = "/kefu/images/";
+var urlroot = "/public/kefu/images/";
 var tOut = -1;
 var drag = false;
 var g_safeNode = null;

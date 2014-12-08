@@ -177,7 +177,7 @@
                                   
                           <a href="http://bbs.itcast.cn">+MORE</a></span></h4>	
 <div class="tie">		  
-<script type="text/javascript" src="http://bbs.itcast.cn/api.php?mod=js&bid=67"></script>
+
 </div>
                           <div class="clear"></div>
                   </div>
