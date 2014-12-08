@@ -17,14 +17,17 @@
                   <li><a href="" menuid="4">模型管理</a></li>
 				  <li><a href="" menuid="4">用户管理</a></li>
 				<li><a href="" menuid="4">企业</a></li>
+                                        
                </ul>
+      
+   
       <div class="head-right">
-        <div class="userinfo user-name"><span>11</span>
+        <div class="userinfo user-name"><span>管理</span>
           <div class="userpanel">
           <ul>
             <li>
-              <a href=""><i class="icon icon-home"></i>官方网站</a>
-              <a href=""><i class="icon icon-user"></i>退出登录</a>
+                
+              <a href="/index.php/Admin/Admin/logo_out"><i class="icon icon-user"></i>退出登录</a>
               <a href="#"><i class="icon icon-folder"></i>更新缓存</a>
               <a href="http://www.php100.com/manual/ci/" target="_blank"><i class="icon icon-flag"></i>在线帮助</a>
             </li>
@@ -112,7 +115,7 @@
             </ul>
 		  </li>
           <li>
-			  <span><a href="">用户中心</a></span>
+	 <span><a href="">用户中心</a></span>
             <ul class="son">
               <li><a href="#" target="opt">权限管理</a></li>
               <li><a href="#" target="opt">添加权限</a></li>

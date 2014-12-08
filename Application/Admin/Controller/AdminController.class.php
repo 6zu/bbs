@@ -48,7 +48,14 @@ class AdminController extends Controller {
         $Verify->codeSet = '0123456789'; 
         $Verify->entry();
     }
-	//右
+    
+    //退出登录
+    public function logo_out(){
+       
+        session(null);
+        $this->success('退出成功！',U('admin/index'));
+    }
+    //右
     public function admin_main(){
         
         $name=session('name');
