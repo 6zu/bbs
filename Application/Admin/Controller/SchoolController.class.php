@@ -126,7 +126,8 @@ class SchoolController extends Controller {
     public function up_stage_pro(){
         $id=$_POST['class_leve_id'];
         $data=$_POST;
-        $User = M('class_leve'); 
+        $User = M('class_leve');
+        //print_r($data);die;
         $info=$User->where("class_leve_id=".$id."")->save($data);
         if($info){
              $this->success('修改成功',U('School/stage_list'));

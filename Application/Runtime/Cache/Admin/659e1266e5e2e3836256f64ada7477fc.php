@@ -29,8 +29,11 @@
                             <?php else: ?>
                             <td>开启</td><?php endif; ?>
 			<td>
-				<a href="">[关闭]</a>
-				<a href="">[编辑]</a>
+                               <?php if($vo["class_stu"] == 1): ?><a href="/admin/School/up_class_stu?id=<?php echo ($vo["class_id"]); ?>&stu=0">[关闭]</a>
+                                <?php else: ?>
+                                <a href="/admin/School/up_class_stu?id=<?php echo ($vo["class_id"]); ?>&stu=1">[开启]</a><?php endif; ?>
+				
+				<a href="/admin/School/up_class?id=<?php echo ($vo["class_id"]); ?>">[编辑]</a>
 				<a href="/admin/School/del_class?id=<?php echo ($vo["class_id"]); ?>" class="del">[删除]</a>
 			</td>
 		</tr><?php endforeach; endif; else: echo "" ;endif; ?>

@@ -48,7 +48,6 @@ class AdminController extends Controller {
         $Verify->codeSet = '0123456789'; 
         $Verify->entry();
     }
-
 	//右
     public function admin_main(){
         

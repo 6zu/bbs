@@ -6,7 +6,7 @@
 	<title></title>
 </head>
 <body>
-	<form action="/admin/School/up_teacher_pro" method="post">
+	<form action="/admin/School/up_stage_pro" method="post">
 		<table class="table">
 			<tr >
 				<td class="th" colspan="2">添加阶段</td>
