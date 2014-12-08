@@ -11,12 +11,23 @@ class SchoolController extends Controller {
         $User=M('class');
         $data=$_POST;
         //print_r($data);die;
-        if(!empty($data['class_name'])&&!empty($data['class_key'])&&!empty($data['class_desc'])){
-             $User->data($data)->add();
-             $this->success('添加成功',U('School/class_list'));
-        }else{
-            $this->error('添加失败,请完善信息');
-        }
+         $upload = new \Think\Upload();// 实例化上传类 
+          //$upload->maxSize   =     3145728 ;// 设置附件上传大小  
+          $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型   
+          $upload->rootPath  =      './Public/uploads/'; // 设置附件上传目录    // 上传文件  
+          $info   =   $upload->upload();    
+         if(!$info) {// 上传错误提示错误信息       
+             $this->error($upload->getError());    
+         }else{        
+                  if(!empty($data['class_name'])&&!empty($data['class_key'])&&!empty($data['class_desc'])){
+                        
+                        $data[class_img]= $info['class_img']['savepath'].$info['class_img']['savename'];
+                        $User->data($data)->add();
+                        $this->success('添加成功',U('School/class_list'));
+                   }else{
+                       $this->error('添加失败,请完善信息');
+                   }
+            }
     }
     //课程显示
     public function class_list(){
@@ -64,12 +75,32 @@ class SchoolController extends Controller {
     public function up_class_pro(){
         $id=$_POST['class_id'];
         $data=$_POST;
-        $User = M('class'); 
-        $info=$User->where("class_id=".$id."")->save($data);
-        if($info){
-             $this->success('修改成功',U('School/class_list'));
+        if(empty($_FILES['class_img']['name'])){        
+            $User = M('class'); 
+            $data[class_img]=$data[class_imgs];
+            unset($data['class_imgs']);
+            $info=$User->where("class_id=".$id."")->save($data);
+            if($info){
+                 $this->success('修改成功',U('School/class_list'));
+            }else{
+                 $this->success('修改失败');
+            }
         }else{
-             $this->success('修改失败');
+          unset($data['class_imgs']);
+          $upload = new \Think\Upload();// 实例化上传类 
+          //$upload->maxSize   =     3145728 ;// 设置附件上传大小  
+          $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型   
+          $upload->rootPath  =      './Public/uploads/'; // 设置附件上传目录    // 上传文件  
+          $info   =   $upload->upload();    
+         if(!$info) {// 上传错误提示错误信息       
+             $this->error($upload->getError());    
+         }else{ 
+                       $User = M('class'); 
+                       $data[class_img]= $info['class_img']['savepath'].$info['class_img']['savename'];
+                       unset($data['class_imgs']);
+                       $User->where("class_id=".$id."")->save($data);
+                       $this->success('修改成功',U('School/class_list'));
+            }
         }
     }
 
@@ -139,7 +170,7 @@ class SchoolController extends Controller {
     public function teacher_add(){
         $this->display();
     }
-     //教师显示
+     //教师添加
     public function add_teacher(){
         $User=M('teacher');
         $data=$_POST;

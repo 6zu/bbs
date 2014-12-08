@@ -17,6 +17,7 @@
 			<th>班级名称</th>
                         <th>关键字</th>
 			<th>描述</th>
+                        <th>图片</th>
                         <th>状态</th>
 			<th>操作</th>
 		</tr>
@@ -26,6 +27,7 @@
                         <td>{$vo.class_name}</td>
 			<td>{$vo.class_key}</td>
                         <td>{$vo.class_desc}</td>
+                        <td><img src ="__PUBLIC__/Uploads/{$vo.class_img}" width="30px" height="30px"></td>
 			<if condition='$vo.class_stu eq 0'>
                             <td>关闭</td>
                             <else/>

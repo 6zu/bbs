@@ -9,7 +9,6 @@ class AdminController extends Controller {
     public function index(){
       $this->display();
     }
-
     //处理登陆
     public function admin_login_pro(){
         //print_r($_POST);
@@ -61,19 +60,6 @@ class AdminController extends Controller {
 		 $this->display();
 	}
 	public function admin_header(){
-		 $this->display();
-	}
-//班级列表
-public function class_list(){
-		 $this->display();
-	}
-
-//添加阶段
-public function stage_add(){
-		 $this->display();
-	}
-//班级列表
-public function stage_list(){
 		 $this->display();
 	}
 //添加视频

@@ -6,7 +6,7 @@
 	<title></title>
 </head>
 <body>
-    <form action="/admin/School/up_class_pro"  method="post">
+    <form action="/admin/School/up_class_pro"  method="post" enctype="multipart/form-data">
 		<table class="table">
 			<tr >
 				<td class="th" colspan="2">添加班级</td>
@@ -31,6 +31,10 @@
 				<td>关键字</td>
 				<td><input type="text" name="class_key" value="<?php echo ($list["class_key"]); ?>"/></td>
 			</tr>
+                        <tr>
+				<td>上传图片</td>
+				<td><input type="file" name="class_img"/>   原图：<img src ="/Public/Uploads/<?php echo ($list["class_img"]); ?>" width="30px" height="30px"></td>
+			</tr>
 			<tr>
 				<td>描述</td>
 				<td>
@@ -40,6 +44,7 @@
 			<tr>
 				<td colspan="2">
                                         <input type="hidden" value="<?php echo ($list["class_id"]); ?>" name="class_id"/>
+                                        <input type="hidden" value="<?php echo ($list["class_img"]); ?>" name="class_imgs"/>
 					<input type="submit" value="修改" class="input_button"/>
 					<input type="reset" class="input_button"/>
 				</td>
