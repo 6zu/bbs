@@ -12,7 +12,7 @@ var type;
 
 if(kfguin)
 {
-  rightDivHtml = '<div id="rightDiv" style="position:absolute; top:160px; right:1px;">';
+  rightDivHtml = '<div id="rightDiv" style="position:absolute; top:200px; right:1px;">';
 
   rightDivHtml += kf_getPopupRightDivHtml(kfguin,ws);
   
