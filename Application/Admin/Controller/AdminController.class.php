@@ -24,7 +24,7 @@ class AdminController extends Controller {
             //echo $admin_user->getLastSql();
             //dump($data);
             if($data!=""){
-                  if($data['admin_pass']=md5($pwd)){
+                  if($data['admin_pass']==md5($pwd)){
                     //  $this->redirect();
                     session('name',$name); 
                     redirect("admin_welcome");

@@ -10,28 +10,62 @@
 <link href="__PUBLIC__/style/imageswitch.css" type="text/css" rel="stylesheet" />
 <link href="__PUBLIC__/style/webim.css" type="text/css" rel="stylesheet" />
 <link href="__PUBLIC__/style/nav_course.css" type="text/css" rel="stylesheet" />
+<link href="__PUBLIC__/style/nav_job.css" type="text/css" rel="stylesheet" />
 <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" /> 
 <script type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jq.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/imageschange.js"></script>
 <script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
 <script type="text/javascript" id="bdshell_js"></script>
 </head>
 
 <body>	
-        <div id="header">
-        <!-- 页面顶部 -->
+<div id="header">
+        <!-- 页面顶部-->
+<?php
+    if($username==""){
+?>
 <div class="top1">
         <p class="fl" style="background:url(__PUBLIC__/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
         <p class="fr">
-                    <a href="http://www.itcast.cn/channel/job.shtml" target="_blank">就业宣言</a>
-                    <a href="http://www.itcast.cn/channel/flow.shtml" target="_blank">报名流程</a>
-                    <a href="http://open.itcast.cn" target="_blank">免费公开课</a>
-                    <a href="http://dvd.itcast.cn" target="_blank">免费学习光盘</a>
-                    <a href="http://www.itcast.cn/channel/book.shtml" target="_blank">原创教材</a>
-                    <a href="http://bbs.itcast.cn/zine.php" target="_blank">传智特刊</a>
-                    <a target="_blank" href="http://www.itcast.cn/channel/personnel.shtml">人才服务</a>
-                    <a href="http://bbs.itcast.cn" target="_blank">技术论坛</a></p>
+ <form method="post" autocomplete="off" id="lsform" action="__ROOT__/index.php/home/public/logo" onsubmit="return lsSubmit();">
+<div class="fastlg cl">
+<span id="return_ls" style="display:none"></span>
+<div class="y pns">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<label for="ls_password" class="z psw_w">用户名</label>
+</td>
+<td><input type="text" name="username" id="ls_username" autocomplete="off" class="px vm" tabindex="901" /></td>
+<td><label for="ls_password" class="z psw_w">密码</label></td>
+<td><input type="password" name="password" id="ls_password" class="px vm" autocomplete="off" tabindex="902" /></td>
+<td class="fastlg_l"><button type="submit" class="pn vm" tabindex="904" style="width: 75px;"><em>登录</em></button></td>
+<td>&nbsp;<a href="__ROOT__/index.php/home/public/register" class="xi2 xw1">注册</a></td>
+</tr>
+</table>
+
 </div>
+
+</div>
+</form>
+      
+</div>
+<?php
+    }else{
+    
+?>
+    <div class="top1">
+        <p class="fl" style="background:url(__PUBLIC__/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
+        <p class="fr">
+            欢迎<font color="red"><?php echo $username?></font>,  <a href="__ROOT__/index.php/home/public/logoout">退出登录</a>
+      
+</div>
+<?php
+    }
+?>
+ 
+ 
 
         <div class="clear"></div>
         <div class="top2">
@@ -179,14 +213,11 @@
   document.getElementById("webim_title").innerHTML = obj.title;
   document.getElementById("webim_link").href = obj.link;
   document.getElementById("webim_img").src = obj.img;
-</script><script type="text/javascript" src="http://www.itcast.cn/js/webim.js"></script>
+</script>
 <script type="text/javascript" src="__PUBLIC__/js/baidushare.js"></script>
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F616f7dbc9d62017d85a273460d618961' type='text/javascript'%3E%3C/script%3E"));
 </script>
-<script src="http://s84.cnzz.com/stat.php?id=4617784&web_id=4617784&show=pic" language="JavaScript"></script>
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-51288244-1', 'itcast.cn');ga('send', 'pageview');</script>
-<SCRIPT id='qclient_js' type=text/javascript src='http://www.81c.cn:8888/tj.js?4b6c2b6ca9da278fba7bd49127ae3b97'></SCRIPT>
 </body>
 </html>

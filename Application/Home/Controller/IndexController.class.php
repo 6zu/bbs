@@ -4,9 +4,12 @@ use Think\Controller;
 class IndexController extends Controller {
     public function index(){
         $model=M('nav');
-        $data=$model->where('is_show=1')->order('sort')->select();
+        $data=$model->where('is_show=1')->order('sort')->select();     
         $data1=$this->kaibanxinxi();
         $data2=$this->jiuyexinxi();
+        $user_name=  session('user_name');
+        $user_id=  session('user_id');
+        $this->assign('username',$user_name);
         $this->assign('data',$data);
         $this->assign('data1',$data1);
         $this->assign('data2',$data2);
@@ -26,4 +29,5 @@ class IndexController extends Controller {
           $data=$model->select();
           return $data;
     }
+    
 }

@@ -9,6 +9,9 @@ class VideoController extends Controller {
 		$this->assign('arr',$data);
 		$models=M('nav');
 		$data=$models->where('is_show=1')->order('sort')->select();
+		$user_name=  session('user_name');
+                                       $user_id=  session('user_id');
+                                       $this->assign('username',$user_name);
 		$this->assign('data',$data);
 		$this->display();	
     }
@@ -18,6 +21,9 @@ class VideoController extends Controller {
 		$models=M('nav');
 		$data=$models->where('is_show=1')->order('sort')->select();
 		$this->assign('data',$data);
+		$user_name=  session('user_name');
+                                       $user_id=  session('user_id');
+                                       $this->assign('username',$user_name);
 		$data=$video->where("video_id='".$_GET['id']."'")->select();
 		$this->assign('arr',$data);
 		$this->display();	

@@ -10,6 +10,7 @@
 <link href="/Public/style/imageswitch.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/webim.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/nav_course.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/nav_job.css" type="text/css" rel="stylesheet" />
 <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" /> 
 <script type="text/javascript" src="/Public/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="/Public/js/jq.js"></script>
@@ -100,21 +101,109 @@
 </ul>
         </div>
 
-    <html>
-<head>
-<title>标题</title>
-</head>
-<body>
-<?php echo $arr[0]['video_path'];?></br>
-<input type="button" value="返回" onclick="back()">
-</body>
-</html>
-<script type="text/javascript">
-<!--
-	function back(){
-	history.go(-1);
-	}
-//-->
+    <div id='box'>
+
+
+<p id="returnmessage4"></p>
+
+<form method="post"  enctype="multipart/form-data" onsubmit=" return checksubmit()" action="/index.php/home/public/register_pro">
+<div align='center'>
+<table >
+<tr>
+<th><span class="rq">*</span>用户名:</th>
+<td><input type="text"  name="user_name" id='user_name'  size="25" onblur='checkname()'/></td>
+<td class="tipcol"><span id="chk_houdunusername"></span></td>
+</tr>
+
+<tr>
+<th><span class="rq">*</span>密码:</th>
+<td><input type="password" name="user_pass" id='user_pass' size="25" onblur='checkpwd()' /></td>
+<td class="tipcol"><span id="chk_houdunpassword" ></span></td>
+</tr>
+
+<input type='hidden' name='user_jifen' value='100'>
+<tr>
+<th><span class="rq">*</span>确认密码:</th>
+<td><input type="password"  name="repwd" id='repwd' size="25" onblur='checkrepwd()'/></td>
+<td class="tipcol"><span id="chk_houdunpassword2" class="p_chk"></span></td>
+</tr>
+<tr>
+<th>&nbsp;</th>
+<td>
+<span id="reginfo_a_btn">
+<em>&nbsp;</em>
+<button class="pn pnc" id="registerformsubmit" type="submit" name="regsubmit" value="true" tabindex="1">
+    <strong>提交</strong>
+</button>
+<span class="y">
+<a href="member.php?mod=logging&amp;action=login&amp;referer=http%3A%2F%2Fbbs.houdunwang.com%2F" onclick="showWindow('login', this.href);return false;" class="xi2">已有帐号？现在登录</a>
+</span>
+新用户注册赠送100积分
+</span>
+</td>
+
+</tr>
+</table>
+</div>
+        </form>
+
+    </div>
+
+<script>
+    
+    function checkname(){
+        if($("#user_name").val()==""){
+            $("#chk_houdunusername").html("用户名不能为空！");
+            return false;
+        }
+    }
+    
+    function checkpwd(){
+        if($("#user_pass").val()==""){
+            $("#chk_houdunpassword").html("密码不能为空！");
+            return false;
+        }
+    }
+    
+    function checkrepwd(){
+        if($("#repwd").val()==""){
+            $("#chk_houdunpassword2").html("两次密码不一致！");
+            return false;
+        }
+        
+        if($("#repwd").val()!=$("#user_pass").val()){
+            $("#chk_houdunpassword2").html("两次密码不一致！");
+            return false;
+        }
+        }
+        function checksubmit(){
+            if($("#user_name").val()==""){
+                    $("#chk_houdunusername").html("用户名不能为空！");
+                    return false;
+                }
+                
+             if($("#user_pass").val()==""){
+              $("#chk_houdunpassword").html("密码不能为空！");
+             return false;
+              }
+             if($("#repwd").val()==""){
+                 $("#chk_houdunpassword2").html("两次密码不一致！");
+                  return false;
+             }
+             
+             if($("#repwd").val()!=$("#user_pass").val()){
+                $("#chk_houdunpassword2").html("两次密码不一致！");
+                return false;
+            }
+        
+            
+              
+              
+              
+              
+        }
+        
+    
 </script> 
     
     
@@ -221,14 +310,11 @@
   document.getElementById("webim_title").innerHTML = obj.title;
   document.getElementById("webim_link").href = obj.link;
   document.getElementById("webim_img").src = obj.img;
-</script><script type="text/javascript" src="http://www.itcast.cn/js/webim.js"></script>
+</script>
 <script type="text/javascript" src="/Public/js/baidushare.js"></script>
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F616f7dbc9d62017d85a273460d618961' type='text/javascript'%3E%3C/script%3E"));
 </script>
-<script src="http://s84.cnzz.com/stat.php?id=4617784&web_id=4617784&show=pic" language="JavaScript"></script>
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-51288244-1', 'itcast.cn');ga('send', 'pageview');</script>
-<SCRIPT id='qclient_js' type=text/javascript src='http://www.81c.cn:8888/tj.js?4b6c2b6ca9da278fba7bd49127ae3b97'></SCRIPT>
 </body>
 </html>

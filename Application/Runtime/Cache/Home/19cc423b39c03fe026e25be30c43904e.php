@@ -10,28 +10,58 @@
 <link href="/Public/style/imageswitch.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/webim.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/nav_course.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/nav_job.css" type="text/css" rel="stylesheet" />
 <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" /> 
 <script type="text/javascript" src="/Public/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/Public/js/jq.js"></script>
 <script type="text/javascript" src="/Public/js/imageschange.js"></script>
 <script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
 <script type="text/javascript" id="bdshell_js"></script>
 </head>
 
 <body>	
-        <div id="header">
-        <!-- 页面顶部 -->
+<div id="header">
+        <!-- 页面顶部-->
+<?php
+ if($username==""){ ?>
 <div class="top1">
         <p class="fl" style="background:url(/Public/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
         <p class="fr">
-                    <a href="http://www.itcast.cn/channel/job.shtml" target="_blank">就业宣言</a>
-                    <a href="http://www.itcast.cn/channel/flow.shtml" target="_blank">报名流程</a>
-                    <a href="http://open.itcast.cn" target="_blank">免费公开课</a>
-                    <a href="http://dvd.itcast.cn" target="_blank">免费学习光盘</a>
-                    <a href="http://www.itcast.cn/channel/book.shtml" target="_blank">原创教材</a>
-                    <a href="http://bbs.itcast.cn/zine.php" target="_blank">传智特刊</a>
-                    <a target="_blank" href="http://www.itcast.cn/channel/personnel.shtml">人才服务</a>
-                    <a href="http://bbs.itcast.cn" target="_blank">技术论坛</a></p>
+ <form method="post" autocomplete="off" id="lsform" action="/index.php/home/public/logo" onsubmit="return lsSubmit();">
+<div class="fastlg cl">
+<span id="return_ls" style="display:none"></span>
+<div class="y pns">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<label for="ls_password" class="z psw_w">用户名</label>
+</td>
+<td><input type="text" name="username" id="ls_username" autocomplete="off" class="px vm" tabindex="901" /></td>
+<td><label for="ls_password" class="z psw_w">密码</label></td>
+<td><input type="password" name="password" id="ls_password" class="px vm" autocomplete="off" tabindex="902" /></td>
+<td class="fastlg_l"><button type="submit" class="pn vm" tabindex="904" style="width: 75px;"><em>登录</em></button></td>
+<td>&nbsp;<a href="/index.php/home/public/register" class="xi2 xw1">注册</a></td>
+</tr>
+</table>
+
 </div>
+
+</div>
+</form>
+      
+</div>
+<?php
+ }else{ ?>
+    <div class="top1">
+        <p class="fl" style="background:url(/Public/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
+        <p class="fr">
+            欢迎<font color="red"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
+      
+</div>
+<?php
+ } ?>
+ 
+ 
 
         <div class="clear"></div>
         <div class="top2">
@@ -305,105 +335,7 @@ QQ影音</a></p>
     <div class="rightbottom"><img src="/Public/video/rightbottom.jpg"/></div>
   </div>
 </div>
-<div class="clear"></div>
-<!-- 页面底部 -->
-<div id="footer">
-  <div class="footer_info">
-    <p class="fl mar"><!--<img src="/images/footlogo.jpg" />--></p>
-    <p><a href="http://www.itcast.cn/channel/introduction.shtml" target="_blank" style="padding-left:0;">传智简介</a>|<a href="http://weibo.com/itcast" target="_blank">官方微博</a>|<a href="http://bbs.itcast.cn/forum.php?mod=forumdisplay&fid=175&filter=typeid&typeid=180" target="_blank">传智快报</a>|<a href="http://bbs.itcast.cn/forum.php?mod=forumdisplay&fid=184&filter=typeid&typeid=217" target="_blank">校区活动</a>|<a href="http://www.itcast.cn/channel/campus.shtml" target="_blank">校园生活</a>|<a href="http://www.itcast.cn/channel/personnel.shtml" target="_blank">人才服务</a>|<a href="http://www.itcast.cn/channel/flow.shtml" target="_blank">汇款账号</a>|<a href="http://www.itcast.cn/channel/zhaopin.shtml" target="_blank">招贤纳士</a>|<a href="http://www.itcast.cn/channel/contact.shtml" target="_blank">联系我们</a></p>
-    <p>传智播客-专业java培训、.net培训、php培训、iOS培训、C++培训、网页设计、平面设计、网络营销培训机构</p>
-    <p>版权所有 2006 - 2014 北京传智播客教育科技有限公司</p>
-    <p>地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096</p>
-    <p>电话：010-82935150/60/70 传真：010-82935100 邮箱: zhanghj+itcast.cn</p>
-    <p><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备08001421号</a><a href="http://www.bjgaj.gov.cn/web/" target="_blank">京公网安备110108007702</a></p>
-	<p style="padding-top:10px"><a style="overflow:hidden; margin-right:6px; padding:0;" href="http://webscan.360.cn/index/checkwebsite/url/www.itcast.cn" target="_blank"><img width="124" height="47" src="http://www.itcast.cn/images/360anquan.png"></a><a style="overflow:hidden; margin-right:6px; padding:0;" href="http://t.knet.cn/index_new.jsp" target="_blank"><img width="124" height="47" src="http://www.itcast.cn/images/cx.png"></a><a target="_blank" href="http://www.bj.cyberpolice.cn/index.do" style="padding:0;"><img width="124" height="47" src="http://www.itcast.cn/images/jc.png"></a></p>
-  </div>
-</div>
-<!-- 页面底部 -->
-<!-- 营销QQ统计 -->
-<!-- WPA Button Begin -->
-<script type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDA2ODg2OF8xNTA3NV84MDAwNjg4Njhf"></script>
-<!-- WPA Button END -->
-<!--[if lte IE 6]>
-<script src="/kefu/js/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        DD_belatedPNG.fix('titZx');
-    </script>
-<![endif]-->
-<LINK rel=stylesheet type=text/css href="/Public/video/common.css">
-<!--[if lte IE 6]>
-<link type="text/css" rel="stylesheet" href="/kefu/css/ie.css" mce_href="/kefu/css/ie.css" />
-<![endif]-->
-<SCRIPT type=text/javascript src="/Public/video/jquery.js"></SCRIPT>
-<SCRIPT type=text/javascript src="/Public/video/kefu.js"></SCRIPT>
-<SCRIPT type=text/javascript>kfguin="800068868";ws="www.itcast.cn"; companyname=""; welcomeword=""; type="1";</SCRIPT>
-<SCRIPT src="/Public/video/kf.js" type=text/javascript></SCRIPT>
-<link href="/Public/video/init.css" mce_href="/Public/video/init.css" rel="stylesheet" type="text/css" />
-<link href="/Public/video/kefu.css" mce_href="/Public/video/kefu.css" rel="stylesheet" type="text/css" />
-<!--[if lte IE 6]>
-<link type="text/css" rel="stylesheet" href="/kefu2/ie.css" mce_href="/kefu2/ie.css" />
-<![endif]-->
-<div class="fixed">
-	<div class="f_left"></div>
-	<div class="f_right">
-		<div class="fr_c1"></div>
-		<div class="fr_c2">
-			<ul>
-				<li class="fr_c2_li1">QQ在线客服</li>
-				<li class="fr_c2_li2">
-					<div><script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDA2ODg2OF8yNjY4M184MDAwNjg4Njhf"></script></div>
-				</li>
-				<li class="fr_c2_li3" style="padding:6px 0 0 12px; height:30px; width:90px; border-bottom:none;">
-					<!-- WPA Button Begin -->
-					<a href="http://cnrdn.com/iP66" target="_blank"><img src="/Public/video/wpa_preview_a02.png"/></a>
-					<!-- WPA Button End -->
-				</li>
-			</ul>
-		</div>
-		<div class="fr_c3">
-			<a href="http://cnrdn.com/iP66" target="_blank"><img src="/Public/video/right_float_web.png" width="122" height="50" /></a>
-		</div>
-		<div class="fr_c4">
-			<ul>
-				<li class="fr_c4_li1">电话咨询</li>
-				<li class="fr_c4_li2"><div id="nobold" style="font-family:Arial;">010-82935150</div></li>
-			</ul>
-		</div>
-		<div class="fr_c6">
-			<ul>
-				<li><a style="display: block; text-indent: 22px; margin: 0px auto; width: 84px; background: url(&quot;http://www.itcast.cn/images/navicon.gif&quot;) no-repeat scroll 0px -20px transparent;" href="http://www.itcast.cn/forms/index.shtml" target="_blank">预约报名<div></div></a></li>
-				<li style="border-bottom:none;"><a style="display: block; text-indent: 22px; margin: 0px auto; width: 84px; background: url(&quot;http://www.itcast.cn/images/navicon.gif&quot;) no-repeat scroll 0px -78px transparent;" href="http://bbs.itcast.cn/" target="_blank">技术交流<div></div></a></li>
-			</ul>
-		</div>
-		<div class="fr_c7"></div>
-	</div>
-</div>
-<script>
-	$(document).ready(function(e) {
-		var t=true;
-		$('.f_left').click(function(){
-			if(t){
-				$('.fixed').animate({right:'-131px'},300);
-				$(this).css('background-position','-30px -396px');
-				t= !t;
-			} else{
-				$('.fixed').animate({right:'0px'},300);
-				$(this).css('background-position','0px -396px');
-				t= !t;
-			}
-		});
-	});
-</script>
-
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F616f7dbc9d62017d85a273460d618961' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script src="http://s84.cnzz.com/stat.php?id=4617784&web_id=4617784&show=pic" language="JavaScript"></script>
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-51288244-1', 'itcast.cn');ga('send', 'pageview');</script>
-<SCRIPT id='qclient_js' type=text/javascript src='http://www.81c.cn:8888/tj.js?4b6c2b6ca9da278fba7bd49127ae3b97'></SCRIPT>
-</body>
-</html> 
+<div class="clear"></div> 
     
     
             <!-- 页面底部 -->
@@ -509,14 +441,11 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
   document.getElementById("webim_title").innerHTML = obj.title;
   document.getElementById("webim_link").href = obj.link;
   document.getElementById("webim_img").src = obj.img;
-</script><script type="text/javascript" src="http://www.itcast.cn/js/webim.js"></script>
+</script>
 <script type="text/javascript" src="/Public/js/baidushare.js"></script>
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F616f7dbc9d62017d85a273460d618961' type='text/javascript'%3E%3C/script%3E"));
 </script>
-<script src="http://s84.cnzz.com/stat.php?id=4617784&web_id=4617784&show=pic" language="JavaScript"></script>
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-51288244-1', 'itcast.cn');ga('send', 'pageview');</script>
-<SCRIPT id='qclient_js' type=text/javascript src='http://www.81c.cn:8888/tj.js?4b6c2b6ca9da278fba7bd49127ae3b97'></SCRIPT>
 </body>
 </html>
