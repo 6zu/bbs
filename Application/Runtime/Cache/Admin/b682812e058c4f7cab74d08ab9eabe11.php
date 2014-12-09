@@ -14,7 +14,7 @@
     <div class="container-fluid">
 
         <div class="loginContainer" id="login-panel">
-            <form method="post" action="/index.php/Admin/Admin/admin_login_pro" id="loginForm" >
+            <form method="post" action="/admin/admin/admin_login_pro" id="loginForm" >
                 <table>
                     <tr>
                         <th><span class="login-input"><label for="name">用户名：</label></span></th>

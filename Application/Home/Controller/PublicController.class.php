@@ -27,6 +27,7 @@ class PublicController extends Controller {
         $arr=$model->create();
         $username=$_POST['user_name'];
         if($arr){
+            $arr['user_time']=  date("Y-m-d");
              $data=$model->add($arr);
              if($data){
                 
