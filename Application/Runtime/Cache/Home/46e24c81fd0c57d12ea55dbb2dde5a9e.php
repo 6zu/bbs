@@ -10,6 +10,7 @@
 <link href="/Public/style/imageswitch.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/webim.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/nav_course.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/nav_job.css" type="text/css" rel="stylesheet" />
 <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" /> 
 <script type="text/javascript" src="/Public/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="/Public/js/jq.js"></script>
@@ -54,7 +55,7 @@
     <div class="top1">
         <p class="fl" style="background:url(/Public/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
         <p class="fr">
-            欢迎<font color="red"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
+            欢迎<font color="red" id="username"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
       
 </div>
 <?php
@@ -221,14 +222,25 @@
   document.getElementById("webim_title").innerHTML = obj.title;
   document.getElementById("webim_link").href = obj.link;
   document.getElementById("webim_img").src = obj.img;
-</script><script type="text/javascript" src="http://www.itcast.cn/js/webim.js"></script>
+</script>
 <script type="text/javascript" src="/Public/js/baidushare.js"></script>
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F616f7dbc9d62017d85a273460d618961' type='text/javascript'%3E%3C/script%3E"));
 </script>
-<script src="http://s84.cnzz.com/stat.php?id=4617784&web_id=4617784&show=pic" language="JavaScript"></script>
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-51288244-1', 'itcast.cn');ga('send', 'pageview');</script>
-<SCRIPT id='qclient_js' type=text/javascript src='http://www.81c.cn:8888/tj.js?4b6c2b6ca9da278fba7bd49127ae3b97'></SCRIPT>
+
+<script>
+    function lsSubmit(){
+      if($("#ls_username") .val()==""){
+          alert("请完善信息，再登录");
+          return false;
+      }
+      
+      if($("#ls_password") .val()==""){
+          alert("请完善信息，再登录");
+           return false;
+      }
+    }
+</script>
 </body>
 </html>
