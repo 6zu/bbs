@@ -1,0 +1,18 @@
+[ 2014-12-09T17:58:02+08:00 ] 127.0.0.1 /index.php/discuz/url/url_add
+ERR: 非法操作:url_add
+
+[ 2014-12-09T17:58:02+08:00 ] 127.0.0.1 /index.php/discuz/url/url_add
+ERR: 非法操作:url_add
+
+[ 2014-12-09T17:58:03+08:00 ] 127.0.0.1 /index.php/discuz/url/url_list
+ERR: 非法操作:url_list
+
+[ 2014-12-09T17:58:03+08:00 ] 127.0.0.1 /index.php/discuz/url/url_list
+ERR: 非法操作:url_list
+
+[ 2014-12-09T17:58:03+08:00 ] 127.0.0.1 /index.php/discuz/url/url_list
+ERR: 非法操作:url_list
+
+[ 2014-12-09T17:58:04+08:00 ] 127.0.0.1 /index.php/discuz/url/url_add
+ERR: 非法操作:url_add
+
