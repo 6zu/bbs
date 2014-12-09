@@ -27,14 +27,26 @@ class VideoController extends Controller {
 	public function play(){
 		$video=M('video');
 		$models=M('nav');
-		$data=$models->where('is_show=1')->order('sort')->select();
+                $user=M('user'); 
+                 $user_id=  session('user_id');
+                   $jifen=$user->where("user_id= $user_id")->find();
+                
+                if($jifen['user_jifen']<10){
+                   $this->error("播放失败，当前积分不足"); 
+                }else{
+                        $data['user_jifen']=$jifen['user_jifen']-10;
+                    $user->where("user_id= $user_id")->data($data)->save();
+                 $data=$models->where('is_show=1')->order('sort')->select();
 		$this->assign('data',$data);
 		$user_name=  session('user_name');
-        $user_id=  session('user_id');
-        $this->assign('username',$user_name);
+                 $user_id=  session('user_id');
+                $this->assign('username',$user_name);
 		$data=$video->where("video_id='".$_GET['id']."'")->select();
 		$this->assign('arr',$data);
-		$this->display();	
+		$this->display(); 
+                
+                }
+		
 	}
 
 }

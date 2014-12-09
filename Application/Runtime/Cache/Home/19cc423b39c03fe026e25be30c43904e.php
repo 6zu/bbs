@@ -55,7 +55,7 @@
     <div class="top1">
         <p class="fl" style="background:url(/Public/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
         <p class="fr">
-            欢迎<font color="red"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
+            欢迎<font color="red" id="username"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
       
 </div>
 <?php
@@ -138,10 +138,16 @@
 <script type="text/javascript">
 <!--
 	function play(id){
-
-		if(confirm("播放该视频需花费10积分")){
-			location.href="<?php echo U('Video/play')?>?id="+id;
-		}
+            
+    if($("#username").html()==null){
+            alert("请先登录"); 
+            return;
+        }else{
+             if(confirm("播放该视频需花费10积分")){
+                 location.href="<?php echo U('Video/play')?>?id="+id;
+                }
+        }
+   
 	}
 //-->
 </script>
