@@ -55,8 +55,10 @@
     <div class="top1">
         <p class="fl" style="background:url(/Public/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
         <p class="fr">
-            欢迎<font color="red" id="username"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
-      
+
+            欢迎<font color="red"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
+            <a href="/index.php/home/public/user_info">用户中心</a>
+
 </div>
 <?php
  } ?>
