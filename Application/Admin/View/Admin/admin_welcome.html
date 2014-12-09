@@ -1,3 +1,6 @@
+<style>
+a{cursor:pointer;}
+</style>
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,11 +17,11 @@
         <span class="slogan">技术部</span>
       </div>
       <ul class="headermenu">
-                  <li><a href="" menuid="4">模型管理</a></li>
-				  <li><a href="" menuid="4">用户管理</a></li>
-				<li><a href="" menuid="4">企业</a></li>
+          <li><a  menuid="4" onclick="menu(1)">传智后台</a></li>
+		  <li><a  menuid="4" onclick="menu(2)">技术论坛</a></li>
+		  <li><a href="" menuid="4">企业</a></li>
                                         
-               </ul>
+     </ul>
       
    
       <div class="head-right">
@@ -63,7 +66,8 @@
       </script>
     </div>
     <div id="content">
-       <div id="menu">
+    <div id="menu1">
+        <div id="menu">
         <ul class="left-menu">
           <li>
 
@@ -135,6 +139,59 @@
         </ul>
         <div class="close-left" title="点击显示快捷菜单"></div>
       </div> 
+    </div>
+        <!--技术论坛菜单开始-->
+       <div id="menu2"  style="display:none">
+      <div id="menu">
+         <ul class="left-menu">
+          <li>
+
+              <span><a href="">导航管理</a></span>
+            <ul class="son">
+              <li><a href="__ROOT__/index.php/admin/url/add_url" target="opt">添加导航</a></li>
+              <li><a href="__ROOT__/index.php/admin/url/list_url" target="opt">导航列表</a></li>
+              </ul>
+
+			  <span><a href="">用户管理</a></span>
+            <ul class="son">
+              <li><a href="__ROOT__/index.php/admin/School/class_list" target="opt">用户列表</a></li>
+			  <li><a href="__ROOT__/index.php/admin/School/class_add" target="opt">用户积分</a></li>
+              </ul>
+
+			<span><a href="">主题分类</a></span>
+            <ul class="son">
+			<li><a href="__ROOT__/index.php/admin/School/stage_add" target="opt">添加主题</a></li>
+              <li><a href="__ROOT__/index.php/admin/School/stage_list" target="opt">主题列表</a>  </li>
+            </ul>
+			<span><a href="">文章管理</a></span>
+            <ul class="son">
+              <li><a href="__ROOT__/index.php/admin/School/stage_list" target="opt">文章列表</a>  </li>
+            </ul>
+				
+            </li>       
+        </ul>   
+         <ul id="shortcut-ico" class="fn-hide">
+          <li><a href="http://www.myzhaopin.com/index.php/backend/user/userList" target="opt" title="用户管理"><i class="icon icon-user"></i></a></li>
+          <li><a href="http://www.myzhaopin.com/index.php/backend/webConfig/websiteConfig" title="网站配置" target="opt"><i class="icon icon-setting"></i></a></li>
+          <li><a href="/travel/admin/index.php/admin/dataModel/modelList" title="模型列表" target="opt"><i class="icon icon-list"></i></a></li>
+          <li><a href="http://www.myzhaopin.com/index.php/backend/company/recruitList" title="职位列表" target="opt"><i class="icon icon-flag"></i></a></li>
+          <li><a href="http://www.myzhaopin.com/index.php/backend/user/roleList" title="权限配置" target="opt"><i class="icon icon-folder"></i></a></li>
+        </ul>
+        <div class="close-left" title="点击显示快捷菜单"></div>
+      </div>
+       </div>
+        <!--技术论坛菜单结束-->
+        <script type="text/javascript">
+            function menu(id){
+                if(id==1){
+                    document.getElementById('menu1').style.display="block";
+                    document.getElementById('menu2').style.display="none";
+                }else{
+                    document.getElementById('menu1').style.display="none";
+                    document.getElementById('menu2').style.display="block";
+                }
+            }
+        </script>
 	  <div id="opt">
         <iframe name="opt" src="__URL__/admin_main" frameborder="0" scrolling="yes" style="overflow:visible;"></iframe>
       </div>

@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>管理员登录</title>
-    <link type="text/css" rel="stylesheet" href="__PUBLIC__/admin/backend/css/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet" href="__PUBLIC__/admin/backend/css/login.css"/>
-        <script type="text/javascript" src="__PUBLIC__/admin/js/jq.js"></script>
+    <link type="text/css" rel="stylesheet" href="/Public/admin/backend/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/Public/admin/backend/css/login.css"/>
+        <script type="text/javascript" src="/Public/admin/js/jq.js"></script>
     </head>
     <body>
         <div id="header">
@@ -44,7 +44,7 @@
                     <tr>
                         <td class="code">
                             <input type="text" class="input-mini" tabindex="3" name="yzm" id="code"/>				
-                            <img src='__URL__/yzm' onclick="gai()"  width="90"  id='yzm'/> 
+                            <img src='/index.php/Admin/Index/yzm' onclick="gai()"  width="90"  id='yzm'/> 
                         </td>
                     </tr>
                                     </table>
@@ -59,12 +59,12 @@
                         var id= Math.round((Math.random()) * 100000000);
                         var yzma=document.getElementById("yzm");
 
-                              yzma.src="__URL__/yzm?id="+id;
+                              yzma.src="/index.php/Admin/Index/yzm?id="+id;
         }
 
         </script>
     </div>
-    <script type="text/javascript" src="__PUBLIC__/admin/backend/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/Public/admin/backend/js/jquery-1.7.2.min.js"></script>
         <script>
         function yzm(){
                 var code=document.getElementById('code');
