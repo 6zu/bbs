@@ -219,5 +219,19 @@
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F616f7dbc9d62017d85a273460d618961' type='text/javascript'%3E%3C/script%3E"));
 </script>
+
+<script>
+    function lsSubmit(){
+      if($("#ls_username") .val()==""){
+          alert("请完善信息，再登录");
+          return false;
+      }
+      
+      if($("#ls_password") .val()==""){
+          alert("请完善信息，再登录");
+           return false;
+      }
+    }
+</script>
 </body>
 </html>
