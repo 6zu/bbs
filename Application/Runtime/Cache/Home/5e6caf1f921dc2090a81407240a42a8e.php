@@ -242,7 +242,7 @@
   
         <li style="border-bottom: medium none; float: left; color: #515151">
 
-        <a href="http://php.itcast.cn/php/course/base.shtml"><b><font style="color: #515151"><?php echo ($vo["class_name"]); ?></font></b></a></li></br>
+        <a href="/index.php/home/school/stage"><b><font style="color: #515151"><?php echo ($vo["class_name"]); ?></font></b></a></li></br>
     
 </ul>
           <ul style="clear: both">
@@ -429,6 +429,20 @@
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F616f7dbc9d62017d85a273460d618961' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script>
+    function lsSubmit(){
+      if($("#ls_username") .val()==""){
+          alert("请完善信息，再登录");
+          return false;
+      }
+      
+      if($("#ls_password") .val()==""){
+          alert("请完善信息，再登录");
+           return false;
+      }
+    }
 </script>
 </body>
 </html>

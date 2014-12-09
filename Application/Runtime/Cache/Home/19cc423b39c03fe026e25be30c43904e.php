@@ -336,96 +336,8 @@ QQ影音</a></p>
     <div class="rightbottom"><img src="/Public/video/rightbottom.jpg"/></div>
   </div>
 </div>
-<<<<<<< HEAD
+
 <div class="clear"></div> 
-=======
-<div class="clear"></div>
-
-<!-- 营销QQ统计 -->
-<!-- WPA Button Begin -->
-<script type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDA2ODg2OF8xNTA3NV84MDAwNjg4Njhf"></script>
-<!-- WPA Button END -->
-<!--[if lte IE 6]>
-<script src="/kefu/js/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        DD_belatedPNG.fix('titZx');
-    </script>
-<![endif]-->
-<LINK rel=stylesheet type=text/css href="/Public/video/common.css">
-<!--[if lte IE 6]>
-<link type="text/css" rel="stylesheet" href="/kefu/css/ie.css" mce_href="/kefu/css/ie.css" />
-<![endif]-->
-<SCRIPT type=text/javascript src="/Public/video/jquery.js"></SCRIPT>
-<SCRIPT type=text/javascript src="/Public/video/kefu.js"></SCRIPT>
-<SCRIPT type=text/javascript>kfguin="800068868";ws="www.itcast.cn"; companyname=""; welcomeword=""; type="1";</SCRIPT>
-<SCRIPT src="/Public/video/kf.js" type=text/javascript></SCRIPT>
-<link href="/Public/video/init.css" mce_href="/Public/video/init.css" rel="stylesheet" type="text/css" />
-<link href="/Public/video/kefu.css" mce_href="/Public/video/kefu.css" rel="stylesheet" type="text/css" />
-<!--[if lte IE 6]>
-<link type="text/css" rel="stylesheet" href="/kefu2/ie.css" mce_href="/kefu2/ie.css" />
-<![endif]-->
-<div class="fixed">
-	<div class="f_left"></div>
-	<div class="f_right">
-		<div class="fr_c1"></div>
-		<div class="fr_c2">
-			<ul>
-				<li class="fr_c2_li1">QQ在线客服</li>
-				<li class="fr_c2_li2">
-					<div><script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDA2ODg2OF8yNjY4M184MDAwNjg4Njhf"></script></div>
-				</li>
-				<li class="fr_c2_li3" style="padding:6px 0 0 12px; height:30px; width:90px; border-bottom:none;">
-					<!-- WPA Button Begin -->
-					<a href="http://cnrdn.com/iP66" target="_blank"><img src="/Public/video/wpa_preview_a02.png"/></a>
-					<!-- WPA Button End -->
-				</li>
-			</ul>
-		</div>
-		<div class="fr_c3">
-			<a href="http://cnrdn.com/iP66" target="_blank"><img src="/Public/video/right_float_web.png" width="122" height="50" /></a>
-		</div>
-		<div class="fr_c4">
-			<ul>
-				<li class="fr_c4_li1">电话咨询</li>
-				<li class="fr_c4_li2"><div id="nobold" style="font-family:Arial;">010-82935150</div></li>
-			</ul>
-		</div>
-		<div class="fr_c6">
-			<ul>
-				<li><a style="display: block; text-indent: 22px; margin: 0px auto; width: 84px; background: url(&quot;http://www.itcast.cn/images/navicon.gif&quot;) no-repeat scroll 0px -20px transparent;" href="http://www.itcast.cn/forms/index.shtml" target="_blank">预约报名<div></div></a></li>
-				<li style="border-bottom:none;"><a style="display: block; text-indent: 22px; margin: 0px auto; width: 84px; background: url(&quot;http://www.itcast.cn/images/navicon.gif&quot;) no-repeat scroll 0px -78px transparent;" href="http://bbs.itcast.cn/" target="_blank">技术交流<div></div></a></li>
-			</ul>
-		</div>
-		<div class="fr_c7"></div>
-	</div>
-</div>
-<script>
-	$(document).ready(function(e) {
-		var t=true;
-		$('.f_left').click(function(){
-			if(t){
-				$('.fixed').animate({right:'-131px'},300);
-				$(this).css('background-position','-30px -396px');
-				t= !t;
-			} else{
-				$('.fixed').animate({right:'0px'},300);
-				$(this).css('background-position','0px -396px');
-				t= !t;
-			}
-		});
-	});
-</script>
-
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F616f7dbc9d62017d85a273460d618961' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script src="http://s84.cnzz.com/stat.php?id=4617784&web_id=4617784&show=pic" language="JavaScript"></script>
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-51288244-1', 'itcast.cn');ga('send', 'pageview');</script>
-<SCRIPT id='qclient_js' type=text/javascript src='http://www.81c.cn:8888/tj.js?4b6c2b6ca9da278fba7bd49127ae3b97'></SCRIPT>
-</body>
-</html> 
->>>>>>> e1f7c57d4a63b7ccdad2f4ba9cedc76864c66495
     
     
             <!-- 页面底部 -->
@@ -536,6 +448,20 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F616f7dbc9d62017d85a273460d618961' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script>
+    function lsSubmit(){
+      if($("#ls_username") .val()==""){
+          alert("请完善信息，再登录");
+          return false;
+      }
+      
+      if($("#ls_password") .val()==""){
+          alert("请完善信息，再登录");
+           return false;
+      }
+    }
 </script>
 </body>
 </html>

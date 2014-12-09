@@ -146,7 +146,7 @@
 <li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml"><font style="color: red"><b>&gt;&gt;查看更多就业信息</b></font></a></li>
 -->
 <volist name="data2" id="vo">
-    <li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml">{$vo.student_name} {$vo.job_time} &nbsp;{$vo.job_company} &nbsp;{$vo.job_money}</a></li>
+    <li><img src="http://www.itcast.cn/images/great.jpg" /><a href="__ROOT__/index.php/home/student/index">{$vo.student_name} {$vo.job_time} &nbsp;{$vo.job_company} &nbsp;{$vo.job_money}</a></li>
 </volist>
 </ul>
 </dd>
@@ -248,7 +248,7 @@
   
         <li style="border-bottom: medium none; float: left; color: #515151">
 
-        <a href="http://php.itcast.cn/php/course/base.shtml"><b><font style="color: #515151">{$vo.class_name}</font></b></a></li></br>
+        <a href="__ROOT__/index.php/home/school/stage"><b><font style="color: #515151">{$vo.class_name}</font></b></a></li></br>
     
 </ul>
           <ul style="clear: both">

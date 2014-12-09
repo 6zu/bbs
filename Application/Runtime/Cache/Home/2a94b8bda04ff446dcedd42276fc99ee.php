@@ -56,7 +56,7 @@
         <p class="fl" style="background:url(/Public/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
         <p class="fr">
             欢迎<font color="red"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
-      
+            <a href="#">用户中心</a>
 </div>
 <?php
  } ?>
@@ -248,7 +248,7 @@
 <li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml">陈＊＊ 2014.10.13 &nbsp;北京弗兰＊＊公司 &nbsp;5500</a></li>
 <li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml"><font style="color: red"><b>&gt;&gt;查看更多就业信息</b></font></a></li>
 -->
-<?php if(is_array($data2)): $i = 0; $__LIST__ = $data2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml"><?php echo ($vo["student_name"]); ?> <?php echo ($vo["job_time"]); ?> &nbsp;<?php echo ($vo["job_company"]); ?> &nbsp;<?php echo ($vo["job_money"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+<?php if(is_array($data2)): $i = 0; $__LIST__ = $data2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><img src="http://www.itcast.cn/images/great.jpg" /><a href="/index.php/home/student/index"><?php echo ($vo["student_name"]); ?> <?php echo ($vo["job_time"]); ?> &nbsp;<?php echo ($vo["job_company"]); ?> &nbsp;<?php echo ($vo["job_money"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 </ul>
 </dd>
 </dl>
@@ -348,7 +348,7 @@
   
         <li style="border-bottom: medium none; float: left; color: #515151">
 
-        <a href="http://php.itcast.cn/php/course/base.shtml"><b><font style="color: #515151"><?php echo ($vo["class_name"]); ?></font></b></a></li></br>
+        <a href="/index.php/home/school/stage"><b><font style="color: #515151"><?php echo ($vo["class_name"]); ?></font></b></a></li></br>
     
 </ul>
           <ul style="clear: both">
@@ -645,6 +645,20 @@
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F616f7dbc9d62017d85a273460d618961' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script>
+    function lsSubmit(){
+      if($("#ls_username") .val()==""){
+          alert("请完善信息，再登录");
+          return false;
+      }
+      
+      if($("#ls_password") .val()==""){
+          alert("请完善信息，再登录");
+           return false;
+      }
+    }
 </script>
 </body>
 </html>
