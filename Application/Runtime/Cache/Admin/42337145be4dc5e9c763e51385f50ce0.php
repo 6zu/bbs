@@ -148,24 +148,23 @@ a{cursor:pointer;}
 
               <span><a href="">导航管理</a></span>
             <ul class="son">
-              <li><a href="/index.php/admin/url/add_url" target="opt">添加导航</a></li>
-              <li><a href="/index.php/admin/url/list_url" target="opt">导航列表</a></li>
+              <li><a href="/index.php/discuz/url/url_add" target="opt">添加导航</a></li>
+              <li><a href="/index.php/discuz/url/url_list" target="opt">导航列表</a></li>
               </ul>
 
 			  <span><a href="">用户管理</a></span>
             <ul class="son">
-              <li><a href="/index.php/admin/School/class_list" target="opt">用户列表</a></li>
-			  <li><a href="/index.php/admin/School/class_add" target="opt">用户积分</a></li>
+              <li><a href="/index.php/discuz/user/user_list" target="opt">用户列表</a></li>
               </ul>
 
 			<span><a href="">主题分类</a></span>
             <ul class="son">
-			<li><a href="/index.php/admin/School/stage_add" target="opt">添加主题</a></li>
-              <li><a href="/index.php/admin/School/stage_list" target="opt">主题列表</a>  </li>
+			<li><a href="/index.php/discuz/theme/theme_add" target="opt">添加主题</a></li>
+              <li><a href="/index.php/discuz/theme/theme_list" target="opt">主题列表</a>  </li>
             </ul>
 			<span><a href="">文章管理</a></span>
             <ul class="son">
-              <li><a href="/index.php/admin/School/stage_list" target="opt">文章列表</a>  </li>
+              <li><a href="/index.php/discuz/article/article_list" target="opt">文章列表</a>  </li>
             </ul>
 				
             </li>       
