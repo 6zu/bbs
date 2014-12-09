@@ -4,3 +4,6 @@ ERR: 非法操作:index
 [ 2014-12-09T10:40:50+08:00 ] 127.0.0.1 /home/Student/index
 ERR: Think\Controller:kaibanxinxi方法不存在！
 
+[ 2014-12-09T13:36:01+08:00 ] 127.0.0.1 /index.php/home/public/user_info
+ERR: 非法操作:user_info
+
