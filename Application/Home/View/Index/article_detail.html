@@ -1,0 +1,37 @@
+<div id="box">
+  <div class="position"><a name="pagetop"/>您现在的位置：<span class="STYLE5"><a href="__ROOT__/index.php">PHP学院</a> &gt;&gt; PHP学院新闻 &gt;&gt; 正文</span></div>
+  <div id="left" class="fl" style="margin-top:8px;">
+    <div class="infotop"><img src="__PUBLIC__/images/infotop.gif"/></div>
+    <div class="left_content1">
+      <div id="printarea">
+        <h1 class="infotitle">{$article.college_article_title}</h1>
+          <?php
+            if($article['update_time']==""){
+        ?>
+         <div class="editer">更新时间:{$article.add_time} 来源:传智播客PHP学院</div>
+        <?php
+            }else{
+        ?>
+        <div class="editer">更新时间:{$article.update_time} 来源:传智播客PHP学院</div>
+        <?php
+            }
+        ?>
+        <div class="infor">
+            <p>{$article.college_article_content}</p>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+      <div class="ad">
+      <!-- 广告区 -->
+      <!--<a href="http://icd.itcast.cn"><img border="0" src="http://www.itcast.cn/images/ad/icdad.gif" width="620" /></a>--> 
+      <!-- 广告区 -->
+      </div>
+    </div>
+    <div><img src="__PUBLIC__/images/leftbottom.gif"/></div>
+  </div>
+
+</div>
+<div class="clear"></div>
+

@@ -1,22 +1,24 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class IndexController extends Controller {
+class QuestionController extends Controller {
     public function index(){
         $model=M('nav');
         $data=$model->where('is_show=1')->order('sort')->select();     
         $data1=$this->kaibanxinxi();
         $data2=$this->jiuyexinxi();
-        $data3=$this->college();
-        $data4=$this->question();
         $user_name=  session('user_name');
         $user_id=  session('user_id');
+        $models=M('question');
+        $list=$models->select();
+         $modelss=M('question_type');
+        $lists=$modelss->where("is_show=1")->select();
         $this->assign('username',$user_name);
+        $this->assign('list',$list);
+        $this->assign('lists',$lists);
         $this->assign('data',$data);
         $this->assign('data1',$data1);
         $this->assign('data2',$data2);
-        $this->assign('data3',$data3);
-        $this->assign('data4',$data4);
         $this->display();
     }
     //开班信息
@@ -25,38 +27,20 @@ class IndexController extends Controller {
           $data=$model->select();
           return $data;
     }
-    
     //就业信息
-    
-    public function jiuyexinxi(){
+     public function jiuyexinxi(){
           $model=M('student');
           $data=$model->select();
           return $data;
     }
     
-    //学院消息
-    public function college(){
-        $model=M('college_article');
-        $data=$model->select();
-        return $data;
-    }
-    
-    //学院消息详细信息
-    public function article_detail(){
-        $models=M('college_article');
+     public function question_detail(){
+        $models=M('question');
         $model=M('nav');
         $data=$model->where('is_show=1')->order('sort')->select();     
-        $article=$models->where("college_article_id=$_GET[id]")->find();
+        $question=$models->where("question_id=$_GET[id]")->find();
         $this->assign("data",$data);
-        $this->assign("article",$article);
+        $this->assign("question",$question);
         $this->display();
-    }
-    
-    //常见问题
-    public function question(){
-        $model=M('question');
-       // join("bbs_question_type on bbs_question.question_type=bbs_question_type.question_type_id")->
-        $data=$model->select();
-        return $data;
     }
 }

@@ -11,6 +11,7 @@
 <link href="/Public/style/webim.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/nav_course.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/nav_job.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/nav_question.css" type="text/css" rel="stylesheet" />
 <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" /> 
 <script type="text/javascript" src="/Public/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="/Public/js/jq.js"></script>
@@ -57,7 +58,7 @@
         <p class="fr">
 
             欢迎<font color="red" id="username"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
-            <a href="/index.php/home/public/user_info">用户中心</a>
+           <!--  <a href="/index.php/home/public/user_info">用户中心</a>--> 
 
 </div>
 <?php

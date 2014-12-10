@@ -112,24 +112,34 @@ a{cursor:pointer;}
         </ul>
 			<ul class="left-menu">
 		 <li>
-		  			<span><a href="">教学视频管理</a></span>
+		<span><a href="">教学视频管理</a></span>
           <ul class="son">
             <li><a href="<?php echo U('video/video_add')?>" target="opt">上传视频</a></li>
               <li><a href="<?php echo U('video/video_list')?>" target="opt">视频列表</a></li>
             </ul>
-		  </li>
+  </li>
+  </ul>
+        <ul class="left-menu">
           <li>
-	 <span><a href="">用户中心</a></span>
+              <span><a href="">常见问题</a></span>
             <ul class="son">
-              <li><a href="#" target="opt">权限管理</a></li>
-              <li><a href="#" target="opt">添加权限</a></li>
-              <li><a href="#" target="opt">配置权限</a></li>
-			  <li><a href="#" target="opt">添加用户</a></li>
-			  <li><a href="#" target="opt">用户列表</a></li>
-            </ul>
+              <li><a href="/index.php/admin/question/add_question_type" target="opt">添加分类</a></li>
+              <li><a href="/index.php/admin/question/list_question_type" target="opt">分类列表</a></li>
+              <li><a href="/index.php/admin/question/add_question" target="opt">问题添加</a></li>
+              <li><a href="/index.php/admin/question/list_question" target="opt">问题列表</a></li>
+              </ul>
           </li>   
 		  
         </ul>
+ <ul class="left-menu">
+        <li>
+        <span><a href="">学院消息</a></span>
+          <ul class="son">
+            <li><a href="/index.php/admin/college/add_college" target="opt">添加学院消息</a></li>
+              <li><a href="/index.php/admin/college/list_college" target="opt">学院消息列表</a></li>
+            </ul>
+  </li>
+  </ul>
         <ul id="shortcut-ico" class="fn-hide">
           <li><a href="http://www.myzhaopin.com/index.php/backend/user/userList" target="opt" title="用户管理"><i class="icon icon-user"></i></a></li>
           <li><a href="http://www.myzhaopin.com/index.php/backend/webConfig/websiteConfig" title="网站配置" target="opt"><i class="icon icon-setting"></i></a></li>
@@ -148,8 +158,8 @@ a{cursor:pointer;}
 
               <span><a href="">导航管理</a></span>
             <ul class="son">
-              <li><a href="/index.php/discuz/url/url_add" target="opt">添加导航</a></li>
-              <li><a href="/index.php/discuz/url/url_list" target="opt">导航列表</a></li>
+              <li><a href="/index.php/discuz/url/add_url" target="opt">添加导航</a></li>
+              <li><a href="/index.php/discuz/url/list_url" target="opt">导航列表</a></li>
               </ul>
 
 			  <span><a href="">用户管理</a></span>

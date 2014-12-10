@@ -1,21 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="/www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="keywords" content="php培训,php教程,php视频,php下载,php视频教程" />
 <meta name="description" content="php培训的龙头老大,口碑最好的php培训机构,进来看看同学们的呐喊，就会知道我们是个怎么样的学校,问天下php培训机构谁与争锋?php培训课程内容包含目前最流行的zendframework、thinkphp框架、ECShop、dedecms等产品的二次开发" />
 <title>传智播客PHP学院官网-北京PHP培训_PHP网站开发培训_PHP程序员培训学校</title>
-<link href="__PUBLIC__/style/css.css" type="text/css" rel="stylesheet" />
-<link href="__PUBLIC__/style/nav_main.css" type="text/css" rel="stylesheet" />
-<link href="__PUBLIC__/style/imageswitch.css" type="text/css" rel="stylesheet" />
-<link href="__PUBLIC__/style/webim.css" type="text/css" rel="stylesheet" />
-<link href="__PUBLIC__/style/nav_course.css" type="text/css" rel="stylesheet" />
-<link href="__PUBLIC__/style/nav_job.css" type="text/css" rel="stylesheet" />
-<link href="__PUBLIC__/style/nav_question.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/css.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/nav_main.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/imageswitch.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/webim.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/nav_course.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/nav_job.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/nav_question.css" type="text/css" rel="stylesheet" />
 <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" /> 
-<script type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="__PUBLIC__/js/jq.js"></script>
-<script type="text/javascript" src="__PUBLIC__/js/imageschange.js"></script>
+<script type="text/javascript" src="/Public/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/Public/js/jq.js"></script>
+<script type="text/javascript" src="/Public/js/imageschange.js"></script>
 <script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
 <script type="text/javascript" id="bdshell_js"></script>
 </head>
@@ -24,12 +24,11 @@
 <div id="header">
         <!-- 页面顶部-->
 <?php
-    if($username==""){
-?>
+ if($username==""){ ?>
 <div class="top1">
-        <p class="fl" style="background:url(__PUBLIC__/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
+        <p class="fl" style="background:url(/Public/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
         <p class="fr">
- <form method="post" autocomplete="off" id="lsform" action="__ROOT__/index.php/home/public/logo" onsubmit="return lsSubmit();">
+ <form method="post" autocomplete="off" id="lsform" action="/index.php/home/public/logo" onsubmit="return lsSubmit();">
 <div class="fastlg cl">
 <span id="return_ls" style="display:none"></span>
 <div class="y pns">
@@ -42,7 +41,7 @@
 <td><label for="ls_password" class="z psw_w">密码</label></td>
 <td><input type="password" name="password" id="ls_password" class="px vm" autocomplete="off" tabindex="902" /></td>
 <td class="fastlg_l"><button type="submit" class="pn vm" tabindex="904" style="width: 75px;"><em>登录</em></button></td>
-<td>&nbsp;<a href="__ROOT__/index.php/home/public/register" class="xi2 xw1">注册</a></td>
+<td>&nbsp;<a href="/index.php/home/public/register" class="xi2 xw1">注册</a></td>
 </tr>
 </table>
 
@@ -53,26 +52,23 @@
       
 </div>
 <?php
-    }else{
-    
-?>
+ }else{ ?>
     <div class="top1">
-        <p class="fl" style="background:url(__PUBLIC__/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
+        <p class="fl" style="background:url(/Public/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
         <p class="fr">
 
-            欢迎<font color="red" id="username"><?php echo $username?></font>,  <a href="__ROOT__/index.php/home/public/logoout">退出登录</a>
-           <!--  <a href="__ROOT__/index.php/home/public/user_info">用户中心</a>--> 
+            欢迎<font color="red" id="username"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
+           <!--  <a href="/index.php/home/public/user_info">用户中心</a>--> 
 
 </div>
 <?php
-    }
-?>
+ } ?>
  
  
 
         <div class="clear"></div>
         <div class="top2">
-                <h1 class="fl"><a href="http://www.itcast.cn"><img src="__PUBLIC__/images/logo.gif" alt="传智播客php培训学院" border="0"  class="png"/></a></h1>
+                <h1 class="fl"><a href="http://www.itcast.cn"><img src="/Public/images/logo.gif" alt="传智播客php培训学院" border="0"  class="png"/></a></h1>
                 <div class="fl toubu">
                 <div class="toubu-font1">PHP学院</div>
                          <!-- 校区 -->
@@ -85,7 +81,7 @@
 <p><a href="http://xa.itcast.cn" target="_blank">西安校区</a></p>
 <!-- 校区 --> 
                 </div>
-                <p class="fr"><img src="__PUBLIC__/images/topword.gif" alt="改变中国教育，我们正在行动..." class="png"/></p>
+                <p class="fr"><img src="/Public/images/topword.gif" alt="改变中国教育，我们正在行动..." class="png"/></p>
         </div>
         <div class="clear"></div>
     <ul id="nav">
@@ -104,13 +100,43 @@
         <li><a href="http://bbs.itcast.cn" target="_blank">技术论坛 </a></li>
           -->
         
-          <volist name="data" id="vo" >
-              <li  id="nav_videodl"><a href="{$vo.nav_url}" >{$vo.nav_name}</a></li>
-          </volist>
+          <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li  id="nav_videodl"><a href="<?php echo ($vo["nav_url"]); ?>" ><?php echo ($vo["nav_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 </ul>
         </div>
 
-    {__CONTENT__} 
+    <div id="box">
+  <div class="position"><a name="pagetop"/>您现在的位置：<span class="STYLE5"><a href="/index.php">首页</a> &gt;&gt; 常见问题 &gt;&gt; 正文</span></div>
+  <div id="left" class="fl" style="margin-top:8px;">
+    <div class="infotop"><img src="/Public/images/infotop.gif"/></div>
+    <div class="left_content1">
+      <div id="printarea">
+        <h1 class="infotitle"><?php echo ($question["question_title"]); ?></h1>
+        <?php
+ if($question['update_time']==""){ ?>
+        <div class="editer">更新时间:<?php echo ($question["add_time"]); ?> 来源:传智播客php学院</div>
+        <?php
+ }else{ ?>
+           <div class="editer">更新时间:<?php echo ($question["update_time"]); ?> 来源:传智播客php学院</div>
+      <?php
+ } ?>
+        <div class="infor">
+         &nbsp;&nbsp; &nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; <p><?php echo ($question["question_content"]); ?></p><br />
+
+  </div>
+      </div>
+      
+
+      
+	  <div class="clear"></div>
+       
+    </div>
+    <div><img src="/Public/images/leftbottom.gif"/></div>
+  </div>
+ 
+</div>
+<div class="clear"></div>
+ 
     
     
             <!-- 页面底部 -->
@@ -139,16 +165,16 @@
     </script>
 <![endif]-->
 
-<LINK rel=stylesheet type=text/css href="__PUBLIC__/kefu/css/common.css">
+<LINK rel=stylesheet type=text/css href="/Public/kefu/css/common.css">
 <!--[if lte IE 6]>
 <link type="text/css" rel="stylesheet" href="/kefu/css/ie.css" mce_href="/kefu/css/ie.css" />
 <![endif]-->
-<SCRIPT type=text/javascript src="__PUBLIC__/kefu/js/jquery.js"></SCRIPT>
-<SCRIPT type=text/javascript src="__PUBLIC__/kefu/js/kefu.js"></SCRIPT>
+<SCRIPT type=text/javascript src="/Public/kefu/js/jquery.js"></SCRIPT>
+<SCRIPT type=text/javascript src="/Public/kefu/js/kefu.js"></SCRIPT>
 <SCRIPT type=text/javascript>kfguin="800068868";ws="www.itcast.cn"; companyname=""; welcomeword=""; type="1";</SCRIPT>
 
-<link href="__PUBLIC__/kefu2/css/init.css" mce_href="__PUBLIC__/kefu2/css/init.css" rel="stylesheet" type="text/css"   />
-<link href="__PUBLIC__/kefu2/css/kefu.css" mce_href="__PUBLIC__/kefu2/css/kefu.css" rel="stylesheet" type="text/css" />
+<link href="/Public/kefu2/css/init.css" mce_href="/Public/kefu2/css/init.css" rel="stylesheet" type="text/css"   />
+<link href="/Public/kefu2/css/kefu.css" mce_href="/Public/kefu2/css/kefu.css" rel="stylesheet" type="text/css" />
 <!--[if lte IE 6]>
 <link type="text/css" rel="stylesheet" href="/kefu2/ie.css" mce_href="/kefu2/ie.css" />
 <![endif]-->
@@ -164,13 +190,13 @@
                                 </li>
                                 <li class="fr_c2_li3" style="padding:6px 0 0 12px; height:30px; width:90px; border-bottom:none;">
                                         <!-- WPA Button Begin -->
-                                        <a href="http://cnrdn.com/iP66" target="_blank"><img src="__PUBLIC__/kefu2/images/wpa_preview_a02.png"/></a>
+                                        <a href="http://cnrdn.com/iP66" target="_blank"><img src="/Public/kefu2/images/wpa_preview_a02.png"/></a>
                                         <!-- WPA Button End -->
                                 </li>
                         </ul>
                 </div>
                 <div class="fr_c3">
-                        <a href="http://cnrdn.com/iP66" target="_blank"><img src="__PUBLIC__/kefu2/images/right_float_web.png" width="122" height="50" /></a>
+                        <a href="http://cnrdn.com/iP66" target="_blank"><img src="/Public/kefu2/images/right_float_web.png" width="122" height="50" /></a>
                 </div>
                 <div class="fr_c4">
                         <ul>
@@ -217,7 +243,7 @@
   document.getElementById("webim_link").href = obj.link;
   document.getElementById("webim_img").src = obj.img;
 </script>
-<script type="text/javascript" src="__PUBLIC__/js/baidushare.js"></script>
+<script type="text/javascript" src="/Public/js/baidushare.js"></script>
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F616f7dbc9d62017d85a273460d618961' type='text/javascript'%3E%3C/script%3E"));
