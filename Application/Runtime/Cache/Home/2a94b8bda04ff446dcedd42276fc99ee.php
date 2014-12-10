@@ -57,7 +57,7 @@
         <p class="fr">
 
             欢迎<font color="red" id="username"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
-            <a href="/index.php/home/public/user_info">用户中心</a>
+           <!--  <a href="/index.php/home/public/user_info">用户中心</a>--> 
 
 </div>
 <?php
