@@ -10,5 +10,4 @@ return array(
         'DB_PREFIX' => 'bbs_', // 数据库表前缀 
         'DB_CHARSET'=> 'utf8', // 字符集
         'SHOW_PAGE_TRACE' =>true,//页面调试信息
-		
 );
