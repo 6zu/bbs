@@ -11,6 +11,7 @@
 <link href="/Public/style/webim.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/nav_course.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/nav_job.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/nav_question.css" type="text/css" rel="stylesheet" />
 <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" /> 
 <script type="text/javascript" src="/Public/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="/Public/js/jq.js"></script>
@@ -57,7 +58,7 @@
         <p class="fr">
 
             欢迎<font color="red" id="username"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
-            <a href="/index.php/home/public/user_info">用户中心</a>
+           <!--  <a href="/index.php/home/public/user_info">用户中心</a>--> 
 
 </div>
 <?php
@@ -160,30 +161,13 @@
 	<div class="clear"></div>
 <p class="kxsy-font1"><img src="http://www.itcast.cn/images/kxsy-tu6.jpg" /></p>
 <!--  校园消息  -->
-	<ul class="huodong11">
-<li><img src="/Public/images/sanjiao-1.jpg" />
-<a href="http://php.itcast.cn/news/20141203/14264847561.shtml" target="_blank">
-<span style="color:#ff0000;">通知：2015年传智播客PHP学科学费价格表</span></a></li>
-<li><img src="/Public/images/sanjiao-1.jpg" /><a href="http://bbs.itcast.cn/thread-41296-1-1.html" target="_blank"><span style="color:#ff0000;">PHP0701班,毕业8天,入职25人,平均薪资6240元！</span></a></li>
-<li><strong><img src="/Public/images/sanjiao-1.jpg" /></strong><a href="http://php.itcast.cn/news/20140904/1456540144.shtml" target="_blank">从辍学到PHP技术总监-4个月,月薪15000元！</a></li>
-<li><strong><img src="/Public/images/sanjiao-1.jpg" /></strong><a href="http://bbs.itcast.cn/thread-29659-1-1.html" target="_blank">PHP0525班,毕业10天,入职23人,平均薪资6435元！</a></li>
-<li><strong><img src="/Public/images/sanjiao-1.jpg" /></strong><a href="http://php.itcast.cn/subject/phpwzlx/index.shtml" target="_blank"><span style="color:#006400;">王者来袭--只做中国PHP培训界的领航者！</span></a></li>
-<li><img src="/Public/images/sanjiao-1.jpg" /><a href="http://bbs.itcast.cn/thread-29345-1-1.html" target="_blank">PHP0421班,毕业35天,入职48人,平均薪资6094元！</a></li>
-<li><img src="/Public/images/sanjiao-1.jpg" /><a href="http://php.itcast.cn/news/20140409/15455356928.shtml" target="_blank">实力教学赢口碑，学员感激赠锦旗！！</a></li>
-<li><strong><img src="/Public/images/sanjiao-1.jpg" /></strong><a href="http://www.itcast.cn/news/20140707/13460628965.shtml" target="_blank">学PHP更要来传智，看我们学员的&quot;另类&quot;原因</a></li>
-<li><img src="/Public/images/sanjiao-1.jpg" /><a href="http://php.itcast.cn/news/20140121/13294061259.shtml" target="_blank">传智播客PHP项目答辩，群雄竞技牛人辈出</a></li>
-<li><img src="/Public/images/sanjiao-1.jpg" /><a href="http://bbs.itcast.cn/thread-25330-1-1.html" target="_blank">仲夏&ldquo;超&rdquo;激情，Ajax公开课与你相约</a></li>
-<li><img src="/Public/images/sanjiao-1.jpg" /><a href="http://php.itcast.cn/news/20140325/09350022324.shtml" target="_blank">中国最火爆的PHP培训，老师只能坐角落！</a></li>
-<li><img src="/Public/images/sanjiao-1.jpg" /><a href="http://php.itcast.cn/news/20140408/09530743698.shtml" target="_blank">传智播客中级PHP项目答辩，学员应对自如！</a></li>
-<li><img src="/Public/images/sanjiao-1.jpg" /><a href="http://www.itcast.cn/news/20140917/16571295116.shtml" target="_blank">看逗逼如何玩转传智生涯 </a></li>
-<li><img src="/Public/images/sanjiao-1.jpg" /><a href="http://php.itcast.cn/subject/phpzty/phpzt/phpzly.html" target="_blank">学PHP编程，不做孬种程序员！</a></li>
-<!--
-<li><img src="/images/sanjiao-1.jpg" /><a href="http://www.itcast.cn/news/20140917/17033478626.shtml" target="_blank">我为寻找最初的职业理想而来</a></li>
-<li><img src="/images/sanjiao-1.jpg" /><a href="http://dvd.itcast.cn/?php" target="_blank"><span style="color:#0000ff;">网速下载不给力，快来申请最新PHP学习光盘！</span></a></li>
-<li><img src="/images/sanjiao-1.jpg" /><a href="http://php.itcast.cn/subject/special/php.html">拒绝&quot;上半天，自学半天&quot;的教学培训</a></li>
-<li><img src="/images/sanjiao-1.jpg" /><a href="http://php.itcast.cn/news/20120913/18063829105.shtml" target="_blank">传智播客PHP视频教程配套笔记，更新到第114讲</a></li>
-<li><strong><img src="/images/sanjiao-1.jpg" /></strong><a href="http://www.itcast.cn/news/20140917/17205196075.shtml" target="_blank">力排众议来传智</a>！</li>
---></ul>
+<ul class="huodong11">
+    <?php if(is_array($data3)): $i = 0; $__LIST__ = $data3;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><img src="/Public/images/sanjiao-1.jpg" />
+        <a href="/index.php/Home/Index/article_detail?id=<?php echo ($vo["college_article_id"]); ?>" target="_blank">
+            <span><?php echo ($vo["college_article_title"]); ?></span>
+        </a>
+    </li><?php endforeach; endif; else: echo "" ;endif; ?>
+</ul>
 
 <!--  校园消息  -->
 <div class="clear"></div>
@@ -410,6 +394,8 @@
 <div class="rightkuang1" style="padding-top:18px;">
 <ul class="zhaopinlist wenti">
 <ul class="zhaopinlist wenti">
+    <?php if(is_array($data4)): $i = 0; $__LIST__ = $data4;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><a href="/inedx.php/home/question/question_detail?id=<?php echo ($vo["question_id"]); ?>" target="_blank"><?php echo ($vo["question_title"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+        <!--
 <li><a href="http://php.itcast.cn/news/20130723/11245447222.shtml" target="_blank">贵校php教学与**学校相比有哪些特色</a>
 <img height="15" src="/Public/images/new.gif" width="29" /></li>
 <li><a href="/news/6c691c56/0dae/41ff/996a/2d110a612490.shtml" target="_blank">你们的PHP培训为什么那么便宜？</a>
@@ -423,10 +409,11 @@
 <li><a href="/news/38f18d98/e496/4c46/9561/5c14558c4394.shtml" target="_blank">你们PHP培训的费用这么低，不怕别人说&quot;便宜没好货&quot;吗？签协议工作有保障吗？</a></li>
 <li><a href="/news/ec9cdb54/95e8/4d2a/862b/0e7213e7f254.shtml" target="_blank">你们的PHP培训质量有保证吗？</a></li>
 <li><a href="/news/23700cbd/742d/46ab/b40a/921b780819e0.shtml" target="_blank">你们的课程安排，是怎么样的？</a></li>
-</ul> 
+-->
+    </ul> 
 <div class="clear"></div>
 	 <p class="text-r"><a href="/php/question.shtml">
-			 <img src="/Public/images/jiantoumore.gif"  border="0" /></a></p>
+	<img src="/Public/images/jiantoumore.gif"  border="0" /></a></p>
 </div>
 <div class="rightbottom"><img src="/Public/images/bottom1.gif"  /></div>
 

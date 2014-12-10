@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+                <link rel="stylesheet" href="__PUBLIC__/css/public.css" />
+        <title></title>
+</head>
+<body>
+        <form action="update_question_pro" method="post">
+                <table class="table">
+                        <tr >
+                                <td class="th" colspan="2">修改问题</td>
+                        </tr>
+                        <tr>
+                                <td>问题标题</td>
+                                <td><input type="text" name="question_title" value="{$data.question_title}"/></td>
+                        </tr>
+                        <tr>
+                                <td>所属分类</td>
+                                <td>
+                                          <select name="question_type">
+                                             <volist name="type_name" id="vo">
+                                                 <if condition="$data['question_type'] eq $vo['question_type_id']">
+                                                     <option value="{$vo.question_type_id}" selected>{$vo.question_type_name}</option>
+                                                 <else/>
+                                                    <option value="{$vo.question_type_id}">{$vo.question_type_name}</option>
+                                                 </if>
+                                             </volist>
+                                          </select>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td>回答问题<td>
+
+                                        <textarea name="question_content" id="description" class="textarea">{$data.question_content}</textarea>
+
+                        </tr>
+                        <tr>
+                                <td colspan="2">
+                                        <input type="submit" value="修改" class="input_button"/>
+                                        <input type="reset" class="input_button"/>
+                                        <input type="hidden" name="question_id" value="{$data.question_id}">
+                                </td>
+                        </tr>
+                </table>
+        </form>
+</body>
+</html>

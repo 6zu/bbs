@@ -1,0 +1,27 @@
+
+<div id="box">
+<div id="left" class="fl">
+<div><img src="__PUBLIC__/images/lefttop.gif"/></div>
+
+<div class="left_content">
+        <h2 class="title1"><span class="STYLE3">常见</span><span class="STYLE2">问题</span></h2>
+        <volist name="lists" id="vo">
+        <h3 class="title2">{$vo.question_type_name}</h3>
+  <ul class="links">
+<ul>
+    <volist name="list" id="v">
+        <if condition="$v['question_type'] eq $vo['question_type_id']">
+<li><a href="__URL__/question_detail?id={$v.question_id}" target="_blank">{$v.question_title}</a> {$v.add_time}</li>
+        </if> </volist>
+</ul>
+ </ul>
+        </volist>				
+</div>
+			<div><img src="__PUBLIC__/images/leftbottom.gif"/></div>
+		</div>		
+		<div id="right" class="fl">
+			
+			
+	  </div>
+	</div>
+	<div class="clear"></div>
