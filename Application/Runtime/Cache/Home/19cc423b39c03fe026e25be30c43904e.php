@@ -175,7 +175,7 @@
 <li><a href="#">伟鹏科技招聘动画工程师 </a></li>
 </ul>-->
 <ul class="zhaopinlist wenti">
- <?php if(is_array($data4)): $i = 0; $__LIST__ = $data4;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><a href="/inedx.php/home/question/question_detail?id=<?php echo ($vo["question_id"]); ?>" target="_blank"><?php echo ($vo["question_title"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?></ul>
+ <?php if(is_array($data4)): $i = 0; $__LIST__ = $data4;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><a href="/index.php/home/question/question_detail?id=<?php echo ($vo["question_id"]); ?>" target="_blank"><?php echo ($vo["question_title"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?></ul>
 
       </ul>
       <div class="clear"></div>
