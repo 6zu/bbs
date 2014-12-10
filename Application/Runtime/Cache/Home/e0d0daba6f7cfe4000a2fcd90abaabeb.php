@@ -171,7 +171,7 @@
   
         <li style="border-bottom: medium none; float: left; color: #515151">
 
-        <a href="http://php.itcast.cn/php/course/base.shtml"><b><font style="color: #515151"><?php echo ($vo["class_name"]); ?></font></b></a></li></br>
+        <a href="/Home/School/stage"><b><font style="color: #515151"><?php echo ($vo["class_name"]); ?></font></b></a></li></br>
     
 </ul>
           <ul style="clear: both">

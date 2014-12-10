@@ -114,7 +114,7 @@
         <?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><h3 class="title2"><?php echo ($vo["question_type_name"]); ?></h3>
   <ul class="links">
 <ul>
-    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if($v['question_type'] == $vo['question_type_id']): ?><li><a href="/index.php/Home/Question/question_detail?id=<?php echo ($v["question_id"]); ?>" target="_blank"><?php echo ($v["question_title"]); ?></a> <?php echo ($v["add_time"]); ?></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if($v['question_type'] == $vo['question_type_id']): ?><li><a href="/Home/Question/question_detail?id=<?php echo ($v["question_id"]); ?>" target="_blank"><?php echo ($v["question_title"]); ?></a> <?php echo ($v["add_time"]); ?></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
 </ul>
  </ul><?php endforeach; endif; else: echo "" ;endif; ?>				
 </div>
