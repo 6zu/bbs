@@ -27,7 +27,7 @@ return array(
     'HTML_CACHE_RULES'  =>     array(  // 定义静态缓存规则  
        // 定义格式1 数组方式   
      'Index:'=>array('Index/{:action}_{id}','60'), 
-	 
+     'Question:'=>array('Question/{:action}_{id}','60'), 
       )
 
 );
