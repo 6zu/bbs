@@ -394,7 +394,7 @@
 <div class="rightkuang1" style="padding-top:18px;">
 <ul class="zhaopinlist wenti">
 <ul class="zhaopinlist wenti">
-    <?php if(is_array($data4)): $i = 0; $__LIST__ = $data4;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><a href="/inedx.php/home/question/question_detail?id=<?php echo ($vo["question_id"]); ?>" target="_blank"><?php echo ($vo["question_title"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+    <?php if(is_array($data4)): $i = 0; $__LIST__ = $data4;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><a href="/index.php/home/question/question_detail?id=<?php echo ($vo["question_id"]); ?>" target="_blank"><?php echo ($vo["question_title"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
         <!--
 <li><a href="http://php.itcast.cn/news/20130723/11245447222.shtml" target="_blank">贵校php教学与**学校相比有哪些特色</a>
 <img height="15" src="/Public/images/new.gif" width="29" /></li>
