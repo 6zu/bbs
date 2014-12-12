@@ -101,7 +101,7 @@
           -->
         
           <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li  id="nav_videodl"><a href="<?php echo ($vo["nav_url"]); ?>" ><?php echo ($vo["nav_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-             <li  id="nav_videodl"><a href="http://www.shihongshuang.cn/upload/" >技术论坛</a></li>
+             <li  id="nav_videodl"><a href="http://www.shihongshuang.cn/upload/" target='blank'>技术论坛</a></li>
 </ul>
         </div>
 
