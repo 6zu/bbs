@@ -11,6 +11,7 @@
 <link href="/Public/style/webim.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/nav_course.css" type="text/css" rel="stylesheet" />
 <link href="/Public/style/nav_job.css" type="text/css" rel="stylesheet" />
+<link href="/Public/style/nav_question.css" type="text/css" rel="stylesheet" />
 <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" /> 
 <script type="text/javascript" src="/Public/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="/Public/js/jq.js"></script>
@@ -56,8 +57,8 @@
         <p class="fl" style="background:url(/Public/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
         <p class="fr">
 
-            欢迎<font color="red"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
-            <a href="/index.php/home/public/user_info">用户中心</a>
+            欢迎<font color="red" id="username"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
+           <!--  <a href="/index.php/home/public/user_info">用户中心</a>--> 
 
 </div>
 <?php
@@ -100,6 +101,7 @@
           -->
         
           <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li  id="nav_videodl"><a href="<?php echo ($vo["nav_url"]); ?>" ><?php echo ($vo["nav_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+             <li  id="nav_videodl"><a href="http://www.shihongshuang.cn/upload/" target='blank'>技术论坛</a></li>
 </ul>
         </div>
 
