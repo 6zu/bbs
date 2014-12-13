@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="/www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -23,46 +23,14 @@
 <body>	
 <div id="header">
         <!-- 页面顶部-->
-<?php
- if($username==""){ ?>
-<div class="top1">
-        <p class="fl" style="background:url(/Public/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
-        <p class="fr">
- <form method="post" autocomplete="off" id="lsform" action="/index.php/home/public/logo" onsubmit="return lsSubmit();">
-<div class="fastlg cl">
-<span id="return_ls" style="display:none"></span>
-<div class="y pns">
-<table cellspacing="0" cellpadding="0">
-<tr>
-<td>
-<label for="ls_password" class="z psw_w">用户名</label>
-</td>
-<td><input type="text" name="username" id="ls_username" autocomplete="off" class="px vm" tabindex="901" /></td>
-<td><label for="ls_password" class="z psw_w">密码</label></td>
-<td><input type="password" name="password" id="ls_password" class="px vm" autocomplete="off" tabindex="902" /></td>
-<td class="fastlg_l"><button type="submit" class="pn vm" tabindex="904" style="width: 75px;"><em>登录</em></button></td>
-<td>&nbsp;<a href="/index.php/home/public/register" class="xi2 xw1">注册</a></td>
-</tr>
-</table>
-
-</div>
-
-</div>
-</form>
-      
-</div>
-<?php
- }else{ ?>
     <div class="top1">
         <p class="fl" style="background:url(/Public/images/hot.png) 107px 10px no-repeat; padding-right:35px;"><span class="blue">专业的IT培训机构！</span></p>
         <p class="fr">
 
-            欢迎<font color="red" id="username"><?php echo $username?></font>,  <a href="/index.php/home/public/logoout">退出登录</a>
+            欢迎<font color="red" id="username">史宏爽</font>,  <a href="/index.php/home/public/logoout">退出登录</a>
            <!--  <a href="/index.php/home/public/user_info">用户中心</a>--> 
 
 </div>
-<?php
- } ?>
  
  
 
@@ -100,95 +68,12 @@
         <li><a href="http://bbs.itcast.cn" target="_blank">技术论坛 </a></li>
           -->
         
-          <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li  id="nav_videodl"><a href="<?php echo ($vo["nav_url"]); ?>" ><?php echo ($vo["nav_name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-             <li  id="nav_videodl"><a href="http://www.shihongshuang.cn/upload/" target='blank'>技术论坛</a></li>
+          <li  id="nav_videodl"><a href="/home/first.html" >首页</a></li><li  id="nav_videodl"><a href="/home/stage.html" >培训课程</a></li><li  id="nav_videodl"><a href="/home/video.html" >视频下载</a></li><li  id="nav_videodl"><a href="/home/persons.html" >师资力量</a></li><li  id="nav_videodl"><a href="/home/obtain.html" >就业信息</a></li><li  id="nav_videodl"><a href="/home/question/index" >常见问题</a></li>             <li  id="nav_videodl"><a href="http://www.shihongshuang.cn/upload/" target='blank'>技术论坛</a></li>
 </ul>
         </div>
 
     
-
 <div id="box">
-<!-- 
-<div >
-<script type="text/javascript">
-(function(){
-var p = {
-url:location.href, /*获取URL，可加上来自分享到QQ标识，方便统计*/
-desc:'', /*分享理由(风格应模拟用户对话),支持多分享语随机展现（使用|分隔）*/
-title:'', /*分享标题(可选)*/
-summary:'', /*分享摘要(可选)*/
-pics:'', /*分享图片(可选)*/
-flash: '', /*视频地址(可选)*/
-site:'', /*分享来源(可选) 如：QQ分享*/
-style:'103',
-width:50,
-height:16
-};
-var s = [];
-for(var i in p){
-s.push(i + '=' + encodeURIComponent(p[i]||''));
-}
-document.write(['<a class="qcShareQQDiv" href="http://connect.qq.com/widget/shareqq/index.html?',s.join('&'),'" target="_blank">分享到QQ</a>'].join(''));
-})();
-</script>
-<script src="http://connect.qq.com/widget/loader/loader.js" widget="shareqq" charset="utf-8"></script>
-</div>
-<div>
-<script type="text/javascript">
-(function(){
-var p = {
-url:location.href,
-showcount:'0',/*是否显示分享总数,显示：'1'，不显示：'0' */
-desc:'',/*默认分享理由(可选)*/
-summary:'',/*分享摘要(可选)*/
-title:'',/*分享标题(可选)*/
-site:'',/*分享来源 如：腾讯网(可选)*/
-pics:'', /*分享图片的路径(可选)*/
-style:'103',
-width:71,
-height:22
-};
-var s = [];
-for(var i in p){
-s.push(i + '=' + encodeURIComponent(p[i]||''));
-}
-document.write(['<a version="1.0" class="qzOpenerDiv" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?',s.join('&'),'" target="_blank">分享</a>'].join(''));
-})();
-</script>
-
-<script src="http://qzonestyle.gtimg.cn/qzone/app/qzlike/qzopensl.js#jsdate=20111201" charset="utf-8"></script>
-</div>
-<div>
-<img src="http://v.t.qq.com/share/images/s/weiboicon16.png" align="absmiddle" border="0" alt="转播到腾讯微博" /> <a href="javascript:void(0)" onclick="postToWb();return false;">转播到腾讯微博</a><script type="text/javascript">
-	function postToWb(){
-		var _url = encodeURIComponent(document.location);
-		var _assname = encodeURI("");//你注册的帐号，不是昵称
-		var _appkey = encodeURI("801552826");//你从腾讯获得的appkey
-		var _pic = encodeURI('');//（例如：var _pic='图片url1|图片url2|图片url3....）
-		var _t = '';//标题和描述信息
-		var metainfo = document.getElementsByTagName("meta");
-		for(var metai = 0;metai < metainfo.length;metai++){
-			if((new RegExp('description','gi')).test(metainfo[metai].getAttribute("name"))){
-				_t = metainfo[metai].attributes["content"].value;
-			}
-		}
-		_t =  document.title+_t;//请在这里添加你自定义的分享内容
-		if(_t.length > 120){
-			_t= _t.substr(0,117)+'...';
-		}
-		_t = encodeURI(_t);
-
-		var _u = 'http://share.v.t.qq.com/index.php?c=share&a=index&url='+_url+'&appkey='+_appkey+'&pic='+_pic+'&assname='+_assname+'&title='+_t;
-		window.open( _u,'', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
-	}
-</script>
-
-</div>
- -->
- <div class="bshare-custom">
- <a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>分享到：
- <a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
-
 
 <div id="left" class="fl"  style="margin-top:3px;">
 
@@ -245,12 +130,23 @@ document.write(['<a version="1.0" class="qzOpenerDiv" href="http://sns.qzone.qq.
 <p class="kxsy-font1"><img src="http://www.itcast.cn/images/kxsy-tu6.jpg" /></p>
 <!--  校园消息  -->
 <ul class="huodong11">
-    <?php if(is_array($data3)): $i = 0; $__LIST__ = $data3;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><img src="/Public/images/sanjiao-1.jpg" />
-        <a href="/Home/Index/article_detail?id=<?php echo ($vo["college_article_id"]); ?>" target="_blank">
-            <span><?php echo ($vo["college_article_title"]); ?></span>
+    <li><img src="/Public/images/sanjiao-1.jpg" />
+        <a href="/Home/Index/article_detail?id=3" target="_blank">
+            <span>地方地方地方刚刚发的</span>
         </a>
-    </li><?php endforeach; endif; else: echo "" ;endif; ?>
-</ul>
+    </li><li><img src="/Public/images/sanjiao-1.jpg" />
+        <a href="/Home/Index/article_detail?id=4" target="_blank">
+            <span>健康的减肥法</span>
+        </a>
+    </li><li><img src="/Public/images/sanjiao-1.jpg" />
+        <a href="/Home/Index/article_detail?id=5" target="_blank">
+            <span>vgbgbg搜索</span>
+        </a>
+    </li><li><img src="/Public/images/sanjiao-1.jpg" />
+        <a href="/Home/Index/article_detail?id=7" target="_blank">
+            <span>地方，过覆盖</span>
+        </a>
+    </li></ul>
 
 <!--  校园消息  -->
 <div class="clear"></div>
@@ -317,8 +213,7 @@ document.write(['<a version="1.0" class="qzOpenerDiv" href="http://sns.qzone.qq.
 <li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml">陈＊＊ 2014.10.13 &nbsp;北京弗兰＊＊公司 &nbsp;5500</a></li>
 <li><img src="http://www.itcast.cn/images/great.jpg" /><a href="http://php.itcast.cn/php/jyjb.shtml"><font style="color: red"><b>&gt;&gt;查看更多就业信息</b></font></a></li>
 -->
-<?php if(is_array($data2)): $i = 0; $__LIST__ = $data2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><img src="http://www.itcast.cn/images/great.jpg" /><a href="/index.php/home/student/index"><?php echo ($vo["student_name"]); ?> <?php echo ($vo["job_time"]); ?> &nbsp;<?php echo ($vo["job_company"]); ?> &nbsp;<?php echo ($vo["job_money"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-</ul>
+<li><img src="http://www.itcast.cn/images/great.jpg" /><a href="/index.php/home/student/index">张三 2014-12-06 &nbsp;八维 &nbsp;10000</a></li><li><img src="http://www.itcast.cn/images/great.jpg" /><a href="/index.php/home/student/index">李四 2014-12-06 &nbsp;八维 &nbsp;12000</a></li><li><img src="http://www.itcast.cn/images/great.jpg" /><a href="/index.php/home/student/index">王五 2014-12-07 &nbsp;八维 &nbsp;12000</a></li></ul>
 </dd>
 </dl>
 
@@ -407,7 +302,7 @@ document.write(['<a version="1.0" class="qzOpenerDiv" href="http://sns.qzone.qq.
 <div id="right" class="fl">	
 <h4 class="righttitle1" style="margin-top:10px;"><span class="fl">PHP培训开班信息</span></h4>
 <div class="jyjb-left" >
-      <?php if(is_array($data1)): $i = 0; $__LIST__ = $data1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><ul>
+      <ul>
     <!--
 <li style="border-bottom: medium none; float: left; color: #515151">
 
@@ -417,15 +312,82 @@ document.write(['<a version="1.0" class="qzOpenerDiv" href="http://sns.qzone.qq.
   
         <li style="border-bottom: medium none; float: left; color: #515151">
 
-        <a href="/index.php/home/school/stage"><b><font style="color: #515151"><?php echo ($vo["class_name"]); ?></font></b></a></li></br>
+        <a href="/index.php/home/school/stage"><b><font style="color: #515151">PHP基础班1</font></b></a></li></br>
     
 </ul>
           <ul style="clear: both">
 <li><a  target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>北京--第34期(2015年01月10号)</a></li>
 <li><a  target="_blank"><span class="time jyjb-font1"><b>爆满已开班</b></span>北京--第33期(2014年11月27号)</a></li>
 <li><a  target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>广州--第08期(2014年12月25号)</a></li>
-</ul><?php endforeach; endif; else: echo "" ;endif; ?>
+</ul><ul>
+    <!--
+<li style="border-bottom: medium none; float: left; color: #515151">
 
+<a href="http://php.itcast.cn/php/course/base.shtml"><b><font style="color: #515151">PHP基础班</font></b></a></li>
+<br />
+    -->
+  
+        <li style="border-bottom: medium none; float: left; color: #515151">
+
+        <a href="/index.php/home/school/stage"><b><font style="color: #515151">PHP就业班1</font></b></a></li></br>
+    
+</ul>
+          <ul style="clear: both">
+<li><a  target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>北京--第34期(2015年01月10号)</a></li>
+<li><a  target="_blank"><span class="time jyjb-font1"><b>爆满已开班</b></span>北京--第33期(2014年11月27号)</a></li>
+<li><a  target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>广州--第08期(2014年12月25号)</a></li>
+</ul><ul>
+    <!--
+<li style="border-bottom: medium none; float: left; color: #515151">
+
+<a href="http://php.itcast.cn/php/course/base.shtml"><b><font style="color: #515151">PHP基础班</font></b></a></li>
+<br />
+    -->
+  
+        <li style="border-bottom: medium none; float: left; color: #515151">
+
+        <a href="/index.php/home/school/stage"><b><font style="color: #515151">php1308A</font></b></a></li></br>
+    
+</ul>
+          <ul style="clear: both">
+<li><a  target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>北京--第34期(2015年01月10号)</a></li>
+<li><a  target="_blank"><span class="time jyjb-font1"><b>爆满已开班</b></span>北京--第33期(2014年11月27号)</a></li>
+<li><a  target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>广州--第08期(2014年12月25号)</a></li>
+</ul><ul>
+    <!--
+<li style="border-bottom: medium none; float: left; color: #515151">
+
+<a href="http://php.itcast.cn/php/course/base.shtml"><b><font style="color: #515151">PHP基础班</font></b></a></li>
+<br />
+    -->
+  
+        <li style="border-bottom: medium none; float: left; color: #515151">
+
+        <a href="/index.php/home/school/stage"><b><font style="color: #515151">PHP1307就业班</font></b></a></li></br>
+    
+</ul>
+          <ul style="clear: both">
+<li><a  target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>北京--第34期(2015年01月10号)</a></li>
+<li><a  target="_blank"><span class="time jyjb-font1"><b>爆满已开班</b></span>北京--第33期(2014年11月27号)</a></li>
+<li><a  target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>广州--第08期(2014年12月25号)</a></li>
+</ul><ul>
+    <!--
+<li style="border-bottom: medium none; float: left; color: #515151">
+
+<a href="http://php.itcast.cn/php/course/base.shtml"><b><font style="color: #515151">PHP基础班</font></b></a></li>
+<br />
+    -->
+  
+        <li style="border-bottom: medium none; float: left; color: #515151">
+
+        <a href="/index.php/home/school/stage"><b><font style="color: #515151">PHP1307</font></b></a></li></br>
+    
+</ul>
+          <ul style="clear: both">
+<li><a  target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>北京--第34期(2015年01月10号)</a></li>
+<li><a  target="_blank"><span class="time jyjb-font1"><b>爆满已开班</b></span>北京--第33期(2014年11月27号)</a></li>
+<li><a  target="_blank"><span class="time jyjb-font2"><b>预约报名</b></span>广州--第08期(2014年12月25号)</a></li>
+</ul>
 
 
 </div>
@@ -477,8 +439,7 @@ document.write(['<a version="1.0" class="qzOpenerDiv" href="http://sns.qzone.qq.
 <div class="rightkuang1" style="padding-top:18px;">
 <ul class="zhaopinlist wenti">
 <ul class="zhaopinlist wenti">
-    <?php if(is_array($data4)): $i = 0; $__LIST__ = $data4;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><a href="/index.php/home/question/question_detail?id=<?php echo ($vo["question_id"]); ?>" target="_blank"><?php echo ($vo["question_title"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
-        <!--
+    <li><a href="/index.php/home/question/question_detail?id=1" target="_blank">上课是全天授课吗？每天的上课时间安排？ </a><li><a href="/index.php/home/question/question_detail?id=2" target="_blank">传智播客上课是放视频吗？ </a><li><a href="/index.php/home/question/question_detail?id=3" target="_blank">基础不太好，能直接参加就业班吗？ </a><li><a href="/index.php/home/question/question_detail?id=4" target="_blank">我不是计算机专业的能学会编程吗？</a><li><a href="/index.php/home/question/question_detail?id=5" target="_blank">二三线城市学php好就业吗？</a><li><a href="/index.php/home/question/question_detail?id=6" target="_blank">php和java的区别在哪里？</a><li><a href="/index.php/home/question/question_detail?id=7" target="_blank">什么样的公司需要php技术？</a>        <!--
 <li><a href="http://php.itcast.cn/news/20130723/11245447222.shtml" target="_blank">贵校php教学与**学校相比有哪些特色</a>
 <img height="15" src="/Public/images/new.gif" width="29" /></li>
 <li><a href="/news/6c691c56/0dae/41ff/996a/2d110a612490.shtml" target="_blank">你们的PHP培训为什么那么便宜？</a>
