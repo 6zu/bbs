@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class UrlController extends Controller {
+class UrlController extends CommonController {
     //添加表单
     public function add_url(){
         $this->display();

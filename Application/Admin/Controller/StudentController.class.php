@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class StudentController extends Controller {
+class StudentController extends CommonController {
 	/*
 		就业信息页面
 	*/

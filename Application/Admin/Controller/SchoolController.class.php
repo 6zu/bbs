@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class SchoolController extends Controller {
+class SchoolController extends CommonController {
     //课程添加主页
     public function class_add(){
         $this->display();

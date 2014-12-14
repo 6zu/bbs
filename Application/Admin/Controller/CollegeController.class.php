@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class CollegeController extends Controller {
+class CollegeController extends CommonController {
     public function add_college(){
         $this->display();
     }

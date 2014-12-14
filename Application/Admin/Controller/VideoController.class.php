@@ -2,7 +2,7 @@
 namespace Admin\Controller;
 use Think\Controller;
  use Think\Upload;
-class VideoController extends Controller {
+class VideoController extends CommonController {
 //添加视频
 public function video_add(){
 	$this->display();

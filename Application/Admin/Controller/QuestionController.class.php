@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class QuestionController extends Controller {
+class QuestionController extends CommonController {
     //添加分类
     public function add_question_type(){
         $this->display();

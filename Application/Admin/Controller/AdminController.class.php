@@ -54,9 +54,13 @@ class AdminController extends Controller {
         session(null);
         $this->success('退出成功！',U('admin/index'));
     }
-    //右
-    public function admin_main(){
-        
+//右
+public function admin_main(){
+        //检测是否登录
+		if(!isset($_SESSION["name"])){
+			//没有登录跳转到登陆页面
+			$this->error("没有登录，禁止访问",U("admin/index"));
+		}
         $name=session('name');
         $this->assign('name',$name);
         $this->display();
@@ -64,39 +68,11 @@ class AdminController extends Controller {
 
 //后台主页  
 	public function admin_welcome(){
-		 $this->display();
+		//检测是否登录
+		if(!isset($_SESSION["name"])){
+			//没有登录跳转到登陆页面
+			$this->error("没有登录，禁止访问",U("admin/index"));
+		}
+		$this->display();
 	}
-	public function admin_header(){
-		 $this->display();
-	}
-//添加视频
-public function video_add(){
-		 $this->display();
-	}
-//视频列表
-public function video_list(){
-	 $this->display();
-}
-
-
-
-//添加职位
-public function Position_add(){
-				 $this->display();
-		}
-//职位列表
-public function Position_list(){
-				 $this->display();
-		}
-
-//添加教师
-public function teacher_add(){
-				 $this->display();
-		}
-
-//教师列表
-public function teac_list(){
-				 $this->display();
-		}
-
 }
