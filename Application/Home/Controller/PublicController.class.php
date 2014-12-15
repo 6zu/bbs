@@ -65,11 +65,11 @@ class PublicController extends Controller {
 			echo '登录成功'.$ucsynlogin.'<br><script>location.href="../index/index"</script>';
 			exit;
 		} elseif($uid == -1) {
-			echo '用户不存在,或者被删除';
+			$this->error('用户不存在,或者被删除');
 		} elseif($uid == -2) {
-			echo '密码错';
+			$this->error('密码错');
 		} else {
-			echo '未定义';
+			$this->error('未定义');
 		}
        /*
         $name=$_POST['username'];
