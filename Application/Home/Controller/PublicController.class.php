@@ -2,13 +2,23 @@
 namespace Home\Controller;
 use Think\Controller;
 class PublicController extends Controller {
+	public function __construct()
+	{
+		parent::__construct();
+		require_once './config.inc.php';
+		require_once './uc_client/client.php';
+	}
     //头部
     public function layout(){
         $model=M('nav');
         $data=$model->where('is_show=1')->order('sort')->select();
         $this->assign('data',$data);
-        $user_name=session('username');
-      
+        //$user_name=session('username');
+      if(!empty($_COOKIE['Example_auth'])) {
+			list($Example_uid, $Example_username) = explode("\t", uc_authcode($_COOKIE['Example_auth'], 'DECODE'));
+		} else {
+			$Example_uid = $Example_username = '';
+		}
         $this->assign('username',$user_name);
         
         
@@ -19,7 +29,7 @@ class PublicController extends Controller {
            $model=M('nav');
            $data=$model->where('is_show=1')->order('sort')->select();
            $this->assign('data',$data);
-           $this->display();
+           $this->display('register');
     }
     
     public function register_pro(){
@@ -40,7 +50,28 @@ class PublicController extends Controller {
     }
     
     public function logo(){
-       
+
+		//通过接口判断登录帐号的正确性，返回值为数组
+		list($uid, $username, $password, $email) = uc_user_login($_POST['username'], $_POST['password']);
+
+		setcookie('Example_auth', '', -86400);
+		if($uid > 0) {
+			//用户登陆成功，设置 Cookie，加密直接用 uc_authcode 函数，用户使用自己的函数
+			setcookie('Example_auth', uc_authcode($uid."\t".$username, 'ENCODE'));
+			session('user_id',$uid); 
+            session('user_name',$username);
+			//生成同步登录的代码
+			$ucsynlogin = uc_user_synlogin($uid);
+			echo '登录成功'.$ucsynlogin.'<br><script>location.href="../index/index"</script>';
+			exit;
+		} elseif($uid == -1) {
+			echo '用户不存在,或者被删除';
+		} elseif($uid == -2) {
+			echo '密码错';
+		} else {
+			echo '未定义';
+		}
+       /*
         $name=$_POST['username'];
         $pwd=$_POST['password'];
         
@@ -58,13 +89,16 @@ class PublicController extends Controller {
                     $this->error("用户名与密码不匹配");
                   }
             }
-            
-        
+            */
     }
     
     public function logoout(){
-         session(null);
-         redirect("/home/index/index");
+		setcookie('Example_auth', '', -86400);
+		//生成同步退出的代码
+		$ucsynlogout = uc_user_synlogout();
+		echo '退出成功'.$ucsynlogout.'<br><script>location.href="../index/index"</script>';
+		session(null);
+		exit;
     }
 
 	public function pv(){
