@@ -15,7 +15,7 @@ return array(
     'URL_ROUTE_RULES'=>array(
     'first'  =>   'index/index',
     'stage'  =>   'home/School/stage',
-    'video'  =>   'video/index',
+    //'video'  =>   'video/index',
     'persons'  =>   'School/index',
     'obtain'  =>   'Student/index',
     ),
